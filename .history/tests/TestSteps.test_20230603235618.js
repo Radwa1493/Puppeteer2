@@ -15,9 +15,13 @@ describe('Login', () => {
             homePage  = new HomePage()
             profilePage  = new ProfilePage()
             registionPage  = new RegistionPage()
-            jest.setTimeout(1000000); // increase defult timeout from 5000
 
-    })
+        })
+        beforeEach(async function() {
+
+                jest.setTimeout(1000000); // increase defult timeout from 5000
+        
+        })
 
 	it('Load Homepage', async () => {
         await homePage.visit()

@@ -7,12 +7,11 @@ module.exports = {
     "**/*.steps.js"
   ],
   
-  "reporters": [
-    "default",
-    ["./node_modules/jest-html-reporter", {
-      "pageTitle": "Test Report"
-    }]
-  ],
+  "jest":{
+    "collectionCoverage":true
+  }
+  
+    ,
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 

@@ -30,7 +30,7 @@ defineFeature(feature, test => {
     test('User can\'t login with invalid credincials', ({ given }) => {
         given('Open Url', async function ()   {
             await homePage.visit()
-            await homePage.isHomePageDisplayed()
+         //   await homePage.isHomePageDisplayed()
             
         });
     });

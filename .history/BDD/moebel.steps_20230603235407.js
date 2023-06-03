@@ -18,7 +18,7 @@ defineFeature(feature, test => {
         homePage  = new HomePage()
         profilePage  = new ProfilePage()
         registionPage  = new RegistionPage()
-        jest.setTimeout(1000000);
+
     })
     beforeEach(async function() {
 

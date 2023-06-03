@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 37,
+            "activePatchIndex": 43,
             "patches": [
                 {
                     "date": 1685788447677,
@@ -156,6 +156,30 @@
                 {
                     "date": 1685821484950,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   \"description\": \"\",\n   \"main\": \"index.js\",\n   \"scripts\": {\n     \"cucumber\":\"cucumber-js -f json:cucumber_report.json\",\n-    \"generate:report\":\"node\",\n+    \"generate:report\":\"node repport.js\",\n \n     \"jest\": \"jest --forceExit \",\n     \"testnode\": \"node ./node_modules/mocha/bin/mocha --timeout=30000 ./tests/Login.js\",\n    \n"
+                },
+                {
+                    "date": 1685825931402,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,20 +3,18 @@\n   \"version\": \"1.0.0\",\n   \"description\": \"\",\n   \"main\": \"index.js\",\n   \"scripts\": {\n-    \"cucumber\":\"cucumber-js -f json:cucumber_report.json\",\n-    \"generate:report\":\"node repport.js\",\n-\n+    \"cucumber\": \"cucumber-js -f json:cucumber_report.json\",\n+    \"generate:report\": \"node repport.js\",\n     \"jest\": \"jest --forceExit \",\n     \"testnode\": \"node ./node_modules/mocha/bin/mocha --timeout=30000 ./tests/Login.js\",\n-   \n     \"test-snapshots\": \"jest --config=jest.config.js --detectOpenHandles --forceExit\",\n     \"test-snapshots-update\": \"jest --config=jest.config.js --updateSnapshot --detectOpenHandles --forceExit\"\n- \n+  },\n \n \n-  },\n+  \n   \"author\": \"\",\n   \"license\": \"ISC\",\n   \"dependencies\": {\n     \"@babel/core\": \"^7.22.1\",\n@@ -28,6 +26,9 @@\n     \"jest\": \"^29.5.0\",\n     \"jest-puppeteer\": \"^9.0.0\",\n     \"mocha\": \"^10.2.0\",\n     \"puppeteer\": \"^20.5.0\"\n+  },\n+  \"devDependencies\": {\n+    \"jest-cucumber\": \"^3.0.1\"\n   }\n }\n"
+                },
+                {
+                    "date": 1685825937518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,11 +10,11 @@\n     \"testnode\": \"node ./node_modules/mocha/bin/mocha --timeout=30000 ./tests/Login.js\",\n     \"test-snapshots\": \"jest --config=jest.config.js --detectOpenHandles --forceExit\",\n     \"test-snapshots-update\": \"jest --config=jest.config.js --updateSnapshot --detectOpenHandles --forceExit\"\n   },\n+\"\"\n \n-\n-  \n+  ,\n   \"author\": \"\",\n   \"license\": \"ISC\",\n   \"dependencies\": {\n     \"@babel/core\": \"^7.22.1\",\n"
+                },
+                {
+                    "date": 1685825943133,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     \"testnode\": \"node ./node_modules/mocha/bin/mocha --timeout=30000 ./tests/Login.js\",\n     \"test-snapshots\": \"jest --config=jest.config.js --detectOpenHandles --forceExit\",\n     \"test-snapshots-update\": \"jest --config=jest.config.js --updateSnapshot --detectOpenHandles --forceExit\"\n   },\n-\"\"\n+\"jest\":{}\n \n   ,\n   \"author\": \"\",\n   \"license\": \"ISC\",\n"
+                },
+                {
+                    "date": 1685825951359,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,11 @@\n     \"testnode\": \"node ./node_modules/mocha/bin/mocha --timeout=30000 ./tests/Login.js\",\n     \"test-snapshots\": \"jest --config=jest.config.js --detectOpenHandles --forceExit\",\n     \"test-snapshots-update\": \"jest --config=jest.config.js --updateSnapshot --detectOpenHandles --forceExit\"\n   },\n-\"jest\":{}\n+\"jest\":{\n+  \"collection\"\n+}\n \n   ,\n   \"author\": \"\",\n   \"license\": \"ISC\",\n"
+                },
+                {
+                    "date": 1685825958213,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     \"test-snapshots\": \"jest --config=jest.config.js --detectOpenHandles --forceExit\",\n     \"test-snapshots-update\": \"jest --config=jest.config.js --updateSnapshot --detectOpenHandles --forceExit\"\n   },\n \"jest\":{\n-  \"collection\"\n+  \"collectionCoverage\"\n }\n \n   ,\n   \"author\": \"\",\n"
+                },
+                {
+                    "date": 1685826010108,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,13 +10,9 @@\n     \"testnode\": \"node ./node_modules/mocha/bin/mocha --timeout=30000 ./tests/Login.js\",\n     \"test-snapshots\": \"jest --config=jest.config.js --detectOpenHandles --forceExit\",\n     \"test-snapshots-update\": \"jest --config=jest.config.js --updateSnapshot --detectOpenHandles --forceExit\"\n   },\n-\"jest\":{\n-  \"collectionCoverage\"\n-}\n \n-  ,\n   \"author\": \"\",\n   \"license\": \"ISC\",\n   \"dependencies\": {\n     \"@babel/core\": \"^7.22.1\",\n"
                 }
             ],
             "date": 1685788447677,

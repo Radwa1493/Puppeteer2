@@ -1,5 +1,6 @@
 import { defineFeature, loadFeature } from 'jest-cucumber';
-const TestDataGenerator = require('../Utilities/TestDataGenerator.js')
+const { Given, When, Then, Before, After } = require('cucumber')
+const TestDataGenerator = re
 import HomePage from '../pages/HomePage'
 import ProfilePage from '../pages/ProfilePage';
 import RegistionPage from '../pages/RegistionPage';
@@ -18,7 +19,7 @@ defineFeature(feature, test => {
         homePage  = new HomePage()
         profilePage  = new ProfilePage()
         registionPage  = new RegistionPage()
-        jest.setTimeout(1000000);
+
     })
     beforeEach(async function() {
 

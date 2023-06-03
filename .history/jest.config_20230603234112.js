@@ -6,13 +6,17 @@ module.exports = {
   "testMatch": [
     "**/*.steps.js"
   ],
-  
-  "reporters": [
+  reporters: [
     "default",
-    ["./node_modules/jest-html-reporter", {
-      "pageTitle": "Test Report"
-    }]
+    [
+      "./node_modules/jest-cucumber/dist/src/reporter", //This is the default path
+      {
+        formatter: "json",
+        path: "./tests/integration-test-results/test-report.json" //specific path
+      }
+    ]
   ],
+
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 
