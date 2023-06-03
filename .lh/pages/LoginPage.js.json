@@ -1,0 +1,94 @@
+{
+    "sourceFile": "pages/LoginPage.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 19,
+            "patches": [
+                {
+                    "date": 1685808815358,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1685808821011,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-export default class \n\\ No newline at end of file\n+export default class LoginPage\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685808840532,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,5 @@\n-export default class LoginPage\n\\ No newline at end of file\n+export default class LoginPage{\r\n+async wait\r\n+\r\n+\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685808855312,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n export default class LoginPage{\r\n-async wait\r\n+async wait(time){\r\n \r\n+    await\r\n+}\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685808860676,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default class LoginPage{\r\n async wait(time){\r\n \r\n-    await\r\n+    await page.wa\r\n }\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685808871461,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default class LoginPage{\r\n async wait(time){\r\n \r\n-    await page.wa\r\n+    await page.waitgor\r\n }\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685808888271,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default class LoginPage{\r\n async wait(time){\r\n \r\n-    await page.waitgor\r\n+    await page.waitFor\r\n }\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685808895820,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default class LoginPage{\r\n async wait(time){\r\n \r\n-    await page.waitFor\r\n+    await page.waitFor()\r\n }\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685808902098,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n export default class LoginPage{\r\n async wait(time){\r\n \r\n-    await page.waitFor()\r\n+    await page.waitFor(time);\r\n+\r\n }\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685808908130,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,10 @@\n \r\n     await page.waitFor(time);\r\n \r\n }\r\n+async wait(time){\r\n \r\n+    await page.waitFor(time);\r\n+\r\n+}\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685808919966,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,10 @@\n \r\n     await page.waitFor(time);\r\n \r\n }\r\n-async wait(time){\r\n+async getTitle(time){\r\n \r\n-    await page.waitFor(time);\r\n+    return a\r\n \r\n }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685808928204,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,8 @@\n \r\n }\r\n async getTitle(time){\r\n \r\n-    return a\r\n+    return await page.t\r\n \r\n }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685808934390,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,7 @@\n \r\n }\r\n async getTitle(time){\r\n \r\n-    return await page.t\r\n-\r\n+    return await page.title();\r\n }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685808943017,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,6 +6,7 @@\n }\r\n async getTitle(time){\r\n \r\n     return await page.title();\r\n+\r\n }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685808951562,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,5 +8,10 @@\n \r\n     return await page.title();\r\n \r\n }\r\n+async getURL(time){\r\n+\r\n+    return await page.title();\r\n+\r\n+}\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685808958867,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,10 @@\n \r\n     return await page.title();\r\n \r\n }\r\n-async getURL(time){\r\n+async getUrl(time){\r\n \r\n-    return await page.title();\r\n+    return await page.url();\r\n \r\n }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685809124266,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n export default class LoginPage{\r\n-async wait(time){\r\n \r\n+async visit(time){\r\n+\r\n     await page.waitFor(time);\r\n \r\n }\r\n async getTitle(time){\r\n"
+                },
+                {
+                    "date": 1685809130001,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n export default class LoginPage{\r\n \r\n-async visit(time){\r\n+async visit(){\r\n \r\n-    await page.waitFor(time);\r\n+    await page.goto(time);\r\n \r\n }\r\n async getTitle(time){\r\n \r\n"
+                },
+                {
+                    "date": 1685809183815,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n export default class LoginPage{\r\n \r\n async visit(){\r\n \r\n-    await page.goto(time);\r\n+    await page.goto('https://www.moebel-kraft.de/'); // navigate to url \r\n \r\n }\r\n async getTitle(time){\r\n \r\n"
+                },
+                {
+                    "date": 1685809217054,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,7 @@\n export default class LoginPage{\r\n \r\n-async visit(){\r\n \r\n-    await page.goto('https://www.moebel-kraft.de/'); // navigate to url \r\n-\r\n-}\r\n async getTitle(time){\r\n \r\n     return await page.title();\r\n \r\n"
+                }
+            ],
+            "date": 1685808815358,
+            "name": "Commit-0",
+            "content": "export default class "
+        }
+    ]
+}

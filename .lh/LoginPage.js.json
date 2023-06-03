@@ -1,0 +1,18 @@
+{
+    "sourceFile": "LoginPage.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1685808990781,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1685808990781,
+            "name": "Commit-0",
+            "content": "export default class BasePage{\r\nasync wait(time){\r\n\r\n    await page.waitFor(time);\r\n\r\n}\r\nasync getTitle(time){\r\n\r\n    return await page.title();\r\n\r\n}\r\nasync getUrl(time){\r\n\r\n    return await page.url();\r\n\r\n}\r\n}"
+        }
+    ]
+}

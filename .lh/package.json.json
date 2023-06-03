@@ -1,0 +1,94 @@
+{
+    "sourceFile": "package.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 19,
+            "patches": [
+                {
+                    "date": 1685788447677,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1685788481088,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,8 @@\n   \"scripts\": {\n     \"test\": \"node ./node_modules/mocha/bin/mocha --timeout=30000 ./tests/Login.js\",\n     \"test-snapshots\":\"jest --config=jest.config.js --detectOpenHandles --forceExit\",\n     \"test-snapshots-update\":\"jest --config=jest.config.js --updateSnapshot --detectOpenHandles --forceExit\"\n-  \n-  \n   },\n   \"author\": \"\",\n   \"license\": \"ISC\",\n   \"dependencies\": {\n"
+                },
+                {
+                    "date": 1685801435737,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,16 @@\n   \"scripts\": {\n     \"test\": \"node ./node_modules/mocha/bin/mocha --timeout=30000 ./tests/Login.js\",\n     \"test-snapshots\":\"jest --config=jest.config.js --detectOpenHandles --forceExit\",\n     \"test-snapshots-update\":\"jest --config=jest.config.js --updateSnapshot --detectOpenHandles --forceExit\"\n+\n   },\n+  \"keywords\": [\n+    \"Puppeteer\",\n+    \"Mocha\",\n+    \"Chai\",\n+    \"Automation\"\n+  ],\n   \"author\": \"\",\n   \"license\": \"ISC\",\n   \"dependencies\": {\n     \"@supercharge/strings\": \"^2.0.0\",\n"
+                },
+                {
+                    "date": 1685801441055,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n   \"keywords\": [\n     \"Puppeteer\",\n     \"Mocha\",\n     \"Chai\",\n-    \"Automation\"\n+    \"Automation\",\n   ],\n   \"author\": \"\",\n   \"license\": \"ISC\",\n   \"dependencies\": {\n"
+                },
+                {
+                    "date": 1685801446221,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,10 @@\n   \"keywords\": [\n     \"Puppeteer\",\n     \"Mocha\",\n     \"Chai\",\n-    \"Automation\",\n+    \"Automation\"\n+\n   ],\n   \"author\": \"\",\n   \"license\": \"ISC\",\n   \"dependencies\": {\n"
+                },
+                {
+                    "date": 1685801451820,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,9 @@\n   \"keywords\": [\n     \"Puppeteer\",\n     \"Mocha\",\n     \"Chai\",\n+    \"Automation\",\n     \"Automation\"\n \n   ],\n   \"author\": \"\",\n"
+                },
+                {
+                    "date": 1685801458592,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,11 +12,10 @@\n   \"keywords\": [\n     \"Puppeteer\",\n     \"Mocha\",\n     \"Chai\",\n-    \"Automation\",\n+    \"jest\",\n     \"Automation\"\n-\n   ],\n   \"author\": \"\",\n   \"license\": \"ISC\",\n   \"dependencies\": {\n"
+                },
+                {
+                    "date": 1685802833739,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,11 +4,10 @@\n   \"description\": \"\",\n   \"main\": \"index.js\",\n   \"scripts\": {\n     \"test\": \"node ./node_modules/mocha/bin/mocha --timeout=30000 ./tests/Login.js\",\n-    \"test-snapshots\":\"jest --config=jest.config.js --detectOpenHandles --forceExit\",\n-    \"test-snapshots-update\":\"jest --config=jest.config.js --updateSnapshot --detectOpenHandles --forceExit\"\n-\n+    \"test-snapshots\": \"jest --config=jest.config.js --detectOpenHandles --forceExit\",\n+    \"test-snapshots-update\": \"jest --config=jest.config.js --updateSnapshot --detectOpenHandles --forceExit\"\n   },\n   \"keywords\": [\n     \"Puppeteer\",\n     \"Mocha\",\n@@ -18,12 +17,16 @@\n   ],\n   \"author\": \"\",\n   \"license\": \"ISC\",\n   \"dependencies\": {\n+    \"@babel/core\": \"^7.22.1\",\n+    \"@babel/preset-env\": \"^7.22.4\",\n     \"@supercharge/strings\": \"^2.0.0\",\n+    \"babel-jest\": \"^29.5.0\",\n     \"chai\": \"^4.3.7\",\n     \"jest\": \"^29.5.0\",\n     \"jest-image-snapshot\": \"^6.1.0\",\n+    \"jest-puppeteer\": \"^9.0.0\",\n     \"mocha\": \"^10.2.0\",\n     \"prettier\": \"^2.8.8\",\n     \"puppeteer\": \"^20.5.0\"\n   }\n"
+                },
+                {
+                    "date": 1685802839646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,8 @@\n   \"version\": \"1.0.0\",\n   \"description\": \"\",\n   \"main\": \"index.js\",\n   \"scripts\": {\n-    \"test\": \"node ./node_modules/mocha/bin/mocha --timeout=30000 ./tests/Login.js\",\n     \"test-snapshots\": \"jest --config=jest.config.js --detectOpenHandles --forceExit\",\n     \"test-snapshots-update\": \"jest --config=jest.config.js --updateSnapshot --detectOpenHandles --forceExit\"\n   },\n   \"keywords\": [\n"
+                },
+                {
+                    "date": 1685802845340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n   \"version\": \"1.0.0\",\n   \"description\": \"\",\n   \"main\": \"index.js\",\n   \"scripts\": {\n+    \"test\": \"node ./node_modules/mocha/bin/mocha --timeout=30000 ./tests/Login.js\",\n     \"test-snapshots\": \"jest --config=jest.config.js --detectOpenHandles --forceExit\",\n     \"test-snapshots-update\": \"jest --config=jest.config.js --updateSnapshot --detectOpenHandles --forceExit\"\n   },\n   \"keywords\": [\n"
+                },
+                {
+                    "date": 1685802850663,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n   \"version\": \"1.0.0\",\n   \"description\": \"\",\n   \"main\": \"index.js\",\n   \"scripts\": {\n-    \"test\": \"node ./node_modules/mocha/bin/mocha --timeout=30000 ./tests/Login.js\",\n+   // \"test\": \"node ./node_modules/mocha/bin/mocha --timeout=30000 ./tests/Login.js\",\n     \"test-snapshots\": \"jest --config=jest.config.js --detectOpenHandles --forceExit\",\n     \"test-snapshots-update\": \"jest --config=jest.config.js --updateSnapshot --detectOpenHandles --forceExit\"\n   },\n   \"keywords\": [\n"
+                },
+                {
+                    "date": 1685802855881,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,10 @@\n   \"version\": \"1.0.0\",\n   \"description\": \"\",\n   \"main\": \"index.js\",\n   \"scripts\": {\n-   // \"test\": \"node ./node_modules/mocha/bin/mocha --timeout=30000 ./tests/Login.js\",\n+\n+   \"test\": \"node ./node_modules/mocha/bin/mocha --timeout=30000 ./tests/Login.js\",\n     \"test-snapshots\": \"jest --config=jest.config.js --detectOpenHandles --forceExit\",\n     \"test-snapshots-update\": \"jest --config=jest.config.js --updateSnapshot --detectOpenHandles --forceExit\"\n   },\n   \"keywords\": [\n"
+                },
+                {
+                    "date": 1685802871606,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n   \"version\": \"1.0.0\",\n   \"description\": \"\",\n   \"main\": \"index.js\",\n   \"scripts\": {\n+    \"test-snapshots\": \"jest --config=jest.config.js --detectOpenHandles --forceExit\",\n \n    \"test\": \"node ./node_modules/mocha/bin/mocha --timeout=30000 ./tests/Login.js\",\n     \"test-snapshots\": \"jest --config=jest.config.js --detectOpenHandles --forceExit\",\n     \"test-snapshots-update\": \"jest --config=jest.config.js --updateSnapshot --detectOpenHandles --forceExit\"\n"
+                },
+                {
+                    "date": 1685802880495,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,11 +3,11 @@\n   \"version\": \"1.0.0\",\n   \"description\": \"\",\n   \"main\": \"index.js\",\n   \"scripts\": {\n-    \"test-snapshots\": \"jest --config=jest.config.js --detectOpenHandles --forceExit\",\n+    \"test: \"jest --config=jest.config.js --detectOpenHandles --forceExit\",\n \n-   \"test\": \"node ./node_modules/mocha/bin/mocha --timeout=30000 ./tests/Login.js\",\n+   \"testnode\": \"node ./node_modules/mocha/bin/mocha --timeout=30000 ./tests/Login.js\",\n     \"test-snapshots\": \"jest --config=jest.config.js --detectOpenHandles --forceExit\",\n     \"test-snapshots-update\": \"jest --config=jest.config.js --updateSnapshot --detectOpenHandles --forceExit\"\n   },\n   \"keywords\": [\n"
+                },
+                {
+                    "date": 1685802886300,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n   \"version\": \"1.0.0\",\n   \"description\": \"\",\n   \"main\": \"index.js\",\n   \"scripts\": {\n-    \"test: \"jest --config=jest.config.js --detectOpenHandles --forceExit\",\n+    \"test\": \"jest --forceExit\",\n \n    \"testnode\": \"node ./node_modules/mocha/bin/mocha --timeout=30000 ./tests/Login.js\",\n     \"test-snapshots\": \"jest --config=jest.config.js --detectOpenHandles --forceExit\",\n     \"test-snapshots-update\": \"jest --config=jest.config.js --updateSnapshot --detectOpenHandles --forceExit\"\n"
+                },
+                {
+                    "date": 1685804352334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n   \"version\": \"1.0.0\",\n   \"description\": \"\",\n   \"main\": \"index.js\",\n   \"scripts\": {\n-    \"test\": \"jest --forceExit\",\n+    \"test\": \"jest --forceExit \",\n \n    \"testnode\": \"node ./node_modules/mocha/bin/mocha --timeout=30000 ./tests/Login.js\",\n     \"test-snapshots\": \"jest --config=jest.config.js --detectOpenHandles --forceExit\",\n     \"test-snapshots-update\": \"jest --config=jest.config.js --updateSnapshot --detectOpenHandles --forceExit\"\n"
+                },
+                {
+                    "date": 1685810540622,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,10 @@\n     \"Chai\",\n     \"jest\",\n     \"Automation\"\n   ],\n+\n+  \n   \"author\": \"\",\n   \"license\": \"ISC\",\n   \"dependencies\": {\n     \"@babel/core\": \"^7.22.1\",\n"
+                },
+                {
+                    "date": 1685810557925,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,11 @@\n    \"testnode\": \"node ./node_modules/mocha/bin/mocha --timeout=30000 ./tests/Login.js\",\n     \"test-snapshots\": \"jest --config=jest.config.js --detectOpenHandles --forceExit\",\n     \"test-snapshots-update\": \"jest --config=jest.config.js --updateSnapshot --detectOpenHandles --forceExit\"\n   },\n+  {\n+    \"type\": \"module\"\n+  }\n   \"keywords\": [\n     \"Puppeteer\",\n     \"Mocha\",\n     \"Chai\",\n"
+                },
+                {
+                    "date": 1685810563654,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     \"test-snapshots-update\": \"jest --config=jest.config.js --updateSnapshot --detectOpenHandles --forceExit\"\n   },\n   {\n     \"type\": \"module\"\n-  }\n+  \n   \"keywords\": [\n     \"Puppeteer\",\n     \"Mocha\",\n     \"Chai\",\n"
+                },
+                {
+                    "date": 1685810799741,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,8 @@\n    \"testnode\": \"node ./node_modules/mocha/bin/mocha --timeout=30000 ./tests/Login.js\",\n     \"test-snapshots\": \"jest --config=jest.config.js --detectOpenHandles --forceExit\",\n     \"test-snapshots-update\": \"jest --config=jest.config.js --updateSnapshot --detectOpenHandles --forceExit\"\n   },\n-  {\n-    \"type\": \"module\"\n   \n   \"keywords\": [\n     \"Puppeteer\",\n     \"Mocha\",\n"
+                }
+            ],
+            "date": 1685788447677,
+            "name": "Commit-0",
+            "content": "{\n  \"name\": \"puppeteer_p2\",\n  \"version\": \"1.0.0\",\n  \"description\": \"\",\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"test\": \"node ./node_modules/mocha/bin/mocha --timeout=30000 ./tests/Login.js\",\n    \"test-snapshots\":\"jest --config=jest.config.js --detectOpenHandles --forceExit\",\n    \"test-snapshots-update\":\"jest --config=jest.config.js --updateSnapshot --detectOpenHandles --forceExit\"\n  \n  \n  },\n  \"author\": \"\",\n  \"license\": \"ISC\",\n  \"dependencies\": {\n    \"@supercharge/strings\": \"^2.0.0\",\n    \"chai\": \"^4.3.7\",\n    \"jest\": \"^29.5.0\",\n    \"jest-image-snapshot\": \"^6.1.0\",\n    \"mocha\": \"^10.2.0\",\n    \"prettier\": \"^2.8.8\",\n    \"puppeteer\": \"^20.5.0\"\n  }\n}\n"
+        }
+    ]
+}

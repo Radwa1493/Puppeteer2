@@ -1,0 +1,138 @@
+{
+    "sourceFile": "pages/HomePage.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 30,
+            "patches": [
+                {
+                    "date": 1685809156936,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1685809173303,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default class LoginPage{\r\n \r\n     async visit(){\r\n     \r\n-        await page.goto(time);\r\n     \r\n-    }\n\\ No newline at end of file\n+    }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685809211664,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n export default class LoginPage{\r\n \r\n     async visit(){\r\n     \r\n-    \r\n+        await page.click(\"div.consentForm__acceptButton:nth-child(2) > button\") ;\r\n+\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685809226214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,14 @@\n export default class LoginPage{\r\n \r\n+\r\n+\r\n     async visit(){\r\n+\r\n+        await page.goto('https://www.moebel-kraft.de/'); // navigate to url \r\n+       \r\n+       }\r\n+    async visit(){\r\n     \r\n         await page.click(\"div.consentForm__acceptButton:nth-child(2) > button\") ;\r\n \r\n     }\r\n"
+                },
+                {
+                    "date": 1685809232237,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n     async visit(){\r\n \r\n         await page.goto('https://www.moebel-kraft.de/'); // navigate to url \r\n-       \r\n+       await\r\n        }\r\n     async visit(){\r\n     \r\n         await page.click(\"div.consentForm__acceptButton:nth-child(2) > button\") ;\r\n"
+                },
+                {
+                    "date": 1685809237984,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n     async visit(){\r\n \r\n         await page.goto('https://www.moebel-kraft.de/'); // navigate to url \r\n-       await\r\n+        await page.\r\n        }\r\n     async visit(){\r\n     \r\n         await page.click(\"div.consentForm__acceptButton:nth-child(2) > button\") ;\r\n"
+                },
+                {
+                    "date": 1685809244204,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n     async visit(){\r\n \r\n         await page.goto('https://www.moebel-kraft.de/'); // navigate to url \r\n-        await page.\r\n+        await page.waitfor\r\n        }\r\n     async visit(){\r\n     \r\n         await page.click(\"div.consentForm__acceptButton:nth-child(2) > button\") ;\r\n"
+                },
+                {
+                    "date": 1685809250985,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n     async visit(){\r\n \r\n         await page.goto('https://www.moebel-kraft.de/'); // navigate to url \r\n-        await page.waitfor\r\n+        await page.waitForSelector()\r\n        }\r\n     async visit(){\r\n     \r\n         await page.click(\"div.consentForm__acceptButton:nth-child(2) > button\") ;\r\n"
+                },
+                {
+                    "date": 1685809257660,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,10 @@\n \r\n     async visit(){\r\n \r\n         await page.goto('https://www.moebel-kraft.de/'); // navigate to url \r\n-        await page.waitForSelector()\r\n+        await page.waitForSelector(\"div.consentForm__acceptButton:nth-child(2) > button\") ;\r\n+\r\n        }\r\n     async visit(){\r\n     \r\n         await page.click(\"div.consentForm__acceptButton:nth-child(2) > button\") ;\r\n"
+                },
+                {
+                    "date": 1685809282266,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n         await page.goto('https://www.moebel-kraft.de/'); // navigate to url \r\n         await page.waitForSelector(\"div.consentForm__acceptButton:nth-child(2) > button\") ;\r\n \r\n        }\r\n+       \r\n     async visit(){\r\n     \r\n         await page.click(\"div.consentForm__acceptButton:nth-child(2) > button\") ;\r\n \r\n"
+                },
+                {
+                    "date": 1685809289272,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,10 +7,10 @@\n         await page.goto('https://www.moebel-kraft.de/'); // navigate to url \r\n         await page.waitForSelector(\"div.consentForm__acceptButton:nth-child(2) > button\") ;\r\n \r\n        }\r\n-       \r\n-    async visit(){\r\n+\r\n+    async CloseC(){\r\n     \r\n         await page.click(\"div.consentForm__acceptButton:nth-child(2) > button\") ;\r\n \r\n     }\r\n"
+                },
+                {
+                    "date": 1685809303691,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,10 @@\n         await page.waitForSelector(\"div.consentForm__acceptButton:nth-child(2) > button\") ;\r\n \r\n        }\r\n \r\n-    async CloseC(){\r\n-    \r\n+    async CloseCookies(){\r\n         await page.click(\"div.consentForm__acceptButton:nth-child(2) > button\") ;\r\n \r\n+\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685809310118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n        }\r\n \r\n     async CloseCookies(){\r\n         await page.click(\"div.consentForm__acceptButton:nth-child(2) > button\") ;\r\n+    }\r\n \r\n-\r\n-    }\r\n+    \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685809316209,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,9 @@\n     async CloseCookies(){\r\n         await page.click(\"div.consentForm__acceptButton:nth-child(2) > button\") ;\r\n     }\r\n \r\n-    \r\n+    async CloopenseCookies(){\r\n+        await page.click(\"div.consentForm__acceptButton:nth-child(2) > button\") ;\r\n+    }\r\n+\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685809323139,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n     async CloseCookies(){\r\n         await page.click(\"div.consentForm__acceptButton:nth-child(2) > button\") ;\r\n     }\r\n \r\n-    async CloopenseCookies(){\r\n+    async OpenProfile(){\r\n         await page.click(\"div.consentForm__acceptButton:nth-child(2) > button\") ;\r\n     }\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685809354111,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,9 @@\n         await page.click(\"div.consentForm__acceptButton:nth-child(2) > button\") ;\r\n     }\r\n \r\n     async OpenProfile(){\r\n-        await page.click(\"div.consentForm__acceptButton:nth-child(2) > button\") ;\r\n-    }\r\n+        await page.click(\".headerElement__icon--login\") ;\r\n+       // await page.waitForTimeout(2000)\r\n+        await page.waitForSelector('#loginEmail')    }\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685809360840,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,7 +15,9 @@\n \r\n     async OpenProfile(){\r\n         await page.click(\".headerElement__icon--login\") ;\r\n        // await page.waitForTimeout(2000)\r\n-        await page.waitForSelector('#loginEmail')    }\r\n \r\n+       await page.waitForSelector('#loginEmail')    \r\n+    }\r\n+\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685809471917,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+\r\n export default class LoginPage{\r\n \r\n \r\n \r\n@@ -14,9 +15,8 @@\n     }\r\n \r\n     async OpenProfile(){\r\n         await page.click(\".headerElement__icon--login\") ;\r\n-       // await page.waitForTimeout(2000)\r\n \r\n        await page.waitForSelector('#loginEmail')    \r\n     }\r\n \r\n"
+                },
+                {
+                    "date": 1685809477607,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-\r\n+import Base\r\n export default class LoginPage{\r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1685809482943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import Base\r\n+import BasePage from ''\r\n export default class LoginPage{\r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1685809816458,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import BasePage from ''\r\n+//import BasePage from './BasePage'\r\n export default class LoginPage{\r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1685809989611,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,5 +19,5 @@\n \r\n        await page.waitForSelector('#loginEmail')    \r\n     }\r\n \r\n-}\n\\ No newline at end of file\n+}module.exports =  TestPage\r\n"
+                },
+                {
+                    "date": 1685810002985,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n //import BasePage from './BasePage'\r\n-export default class LoginPage{\r\n+export default class HomePage{\r\n \r\n \r\n \r\n     async visit(){\r\n"
+                },
+                {
+                    "date": 1685810011064,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,5 +19,5 @@\n \r\n        await page.waitForSelector('#loginEmail')    \r\n     }\r\n \r\n-}module.exports =  TestPage\r\n+}module.exports =  HomePage\r\n"
+                },
+                {
+                    "date": 1685810148883,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,5 +19,5 @@\n \r\n        await page.waitForSelector('#loginEmail')    \r\n     }\r\n \r\n-}module.exports =  HomePage\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685810258920,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,5 +19,5 @@\n \r\n        await page.waitForSelector('#loginEmail')    \r\n     }\r\n \r\n-}\n\\ No newline at end of file\n+}module.exports =  HomePage\r\n"
+                },
+                {
+                    "date": 1685810451966,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,5 +19,5 @@\n \r\n        await page.waitForSelector('#loginEmail')    \r\n     }\r\n \r\n-}module.exports =  HomePage\r\n+}\r\n"
+                },
+                {
+                    "date": 1685810601546,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,6 +18,4 @@\n         await page.click(\".headerElement__icon--login\") ;\r\n \r\n        await page.waitForSelector('#loginEmail')    \r\n     }\r\n-\r\n-}\r\n"
+                },
+                {
+                    "date": 1685810668366,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,10 @@\n //import BasePage from './BasePage'\r\n export default class HomePage{\r\n \r\n+    import BasePage from './BasePage'\r\n \r\n+    export default class HomePage extends BasePage {\r\n \r\n     async visit(){\r\n \r\n         await page.goto('https://www.moebel-kraft.de/'); // navigate to url \r\n@@ -18,4 +20,6 @@\n         await page.click(\".headerElement__icon--login\") ;\r\n \r\n        await page.waitForSelector('#loginEmail')    \r\n     }\r\n+\r\n+}module.exports =  HomePage\r\n"
+                },
+                {
+                    "date": 1685810678444,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,4 @@\n-//import BasePage from './BasePage'\r\n export default class HomePage{\r\n \r\n     import BasePage from './BasePage'\r\n \r\n"
+                },
+                {
+                    "date": 1685810683936,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,4 @@\n-export default class HomePage{\r\n-\r\n     import BasePage from './BasePage'\r\n \r\n     export default class HomePage extends BasePage {\r\n \r\n"
+                }
+            ],
+            "date": 1685809156936,
+            "name": "Commit-0",
+            "content": "export default class LoginPage{\r\n\r\n    async visit(){\r\n    \r\n        await page.goto(time);\r\n    \r\n    }"
+        }
+    ]
+}
