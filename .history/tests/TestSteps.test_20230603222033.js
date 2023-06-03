@@ -46,8 +46,9 @@ describe('ELogin', () => {
 */
           it('Registration', async () => {
                 
-                await registionPage.openRegisterPage()
                 await registionPage.isRegisterPageDisplayed()
+                await registionPage.openRegisterPage()
+                
                 await registionPage.enterNewUserData()
                 
              })

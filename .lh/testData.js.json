@@ -1,0 +1,30 @@
+{
+    "sourceFile": "testData.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1685820393611,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1685820400484,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-export\n\\ No newline at end of file\n+export const \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685820426346,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-export const \n\\ No newline at end of file\n+export const x \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685820432240,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-export const x \n\\ No newline at end of file\n+export const x =\"2\";\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1685820393611,
+            "name": "Commit-0",
+            "content": "export"
+        }
+    ]
+}

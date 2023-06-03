@@ -5,6 +5,7 @@
 module.exports = {
   "testMatch": [
     "**/*.steps.js"
+    Features/steps/*.steps.js"
   ],
 
   // All imported modules in your tests should be mocked automatically

@@ -4,7 +4,7 @@ export default class RegistionPage extends BasePage {
 
     async isRegisterPageDisplayed(){
 
-        await page.waitForSelector('#salutation')    
+        await page.waitForSelector('salutation')    
  
     }
 

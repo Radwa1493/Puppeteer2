@@ -1,0 +1,50 @@
+{
+    "sourceFile": "Features/Login.feature",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1685821667336,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1685821675378,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n Feature: Login\r\n \r\n-s\n\\ No newline at end of file\n+Scenario: \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685821680539,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n Feature: Login\r\n \r\n-Scenario: \n\\ No newline at end of file\n+Scenario: User ca\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685821692553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n Feature: Login\r\n \r\n-Scenario: User ca\n\\ No newline at end of file\n+Scenario: User can't login with invalid cre\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685821698591,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,4 @@\n Feature: Login\r\n \r\n-Scenario: User can't login with invalid cre\n\\ No newline at end of file\n+Scenario: User can't login with invalid credincials\r\n+\r\n"
+                },
+                {
+                    "date": 1685821704286,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n Feature: Login\r\n \r\n-Scenario: User can't login with invalid credincials\r\n-\r\n+    Scenario: User can't login with invalid credincials\r\n+        \r\n"
+                },
+                {
+                    "date": 1685821714066,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n Feature: Login\r\n \r\n     Scenario: User can't login with invalid credincials\r\n-        \r\n+        Given \r\n"
+                },
+                {
+                    "date": 1685821723964,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n Feature: Login\r\n \r\n     Scenario: User can't login with invalid credincials\r\n-        Given \r\n+        Given O\r\n"
+                },
+                {
+                    "date": 1685821729372,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n Feature: Login\r\n \r\n     Scenario: User can't login with invalid credincials\r\n-        Given O\r\n+        Given OpenUrl\r\n"
+                }
+            ],
+            "date": 1685821667336,
+            "name": "Commit-0",
+            "content": "Feature: Login\r\n\r\ns"
+        }
+    ]
+}

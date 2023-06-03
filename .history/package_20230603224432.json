@@ -4,12 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cucumber": "cucumber-js -f json:cucumber_report.json",
-    "generate:report": "node repport.js",
+    "cucumber":"cucumber-js -f json:cucumber_report.json",
+    "generate:report":"cucumber-js -f json:cucumber_report.json",
+
     "jest": "jest --forceExit ",
     "testnode": "node ./node_modules/mocha/bin/mocha --timeout=30000 ./tests/Login.js",
+   
     "test-snapshots": "jest --config=jest.config.js --detectOpenHandles --forceExit",
     "test-snapshots-update": "jest --config=jest.config.js --updateSnapshot --detectOpenHandles --forceExit"
+ 
+
+
   },
   "author": "",
   "license": "ISC",
@@ -24,8 +29,5 @@
     "jest-puppeteer": "^9.0.0",
     "mocha": "^10.2.0",
     "puppeteer": "^20.5.0"
-  },
-  "devDependencies": {
-    "jest-cucumber": "^3.0.1"
   }
 }
