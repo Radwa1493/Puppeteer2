@@ -1,0 +1,26 @@
+{
+    "sourceFile": "pages/ProfilePage.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1685878017944,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1685878025585,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \r\n     async EnterCredinial(){\r\n     await page.click(\".headerElement__icon--login\") ;\r\n        await page.waitForSelector('#loginEmail')   \r\n-       await page.cl\r\n+       await page.cle\r\n        await page.type('#loginEmail','ccjss@ccjss.com')\r\n        await page.type('#loginPassword','wrong')\r\n        await page.click('#login-submit')\r\n     }\r\n"
+                },
+                {
+                    "date": 1685878444011,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import BasePage from './BasePage'\r\n \r\n const elements ={\r\n-    loginEmailTxt: () => { return '#loginEmail' },\r\n+    loginEmailTxtB: () => { return '#loginEmail' },\r\n     TEXTBOX_XPath: () => { return cy.xpath(\"//*[@id='APjFqb']\") },\r\n  \r\n     BUTTON: () => { return cy.get('#APjFqb')}\r\n  }\r\n"
+                }
+            ],
+            "date": 1685878017944,
+            "name": "Commit-0",
+            "content": "import BasePage from './BasePage'\r\n\r\nexport default class ProfilePage extends BasePage {\r\n\r\n    async isLoginPageDisplayed(){\r\n\r\n        await page.waitForSelector('#loginEmail')    \r\n \r\n    }\r\n\r\n    async EnterCredinial(){\r\n    await page.click(\".headerElement__icon--login\") ;\r\n       await page.waitForSelector('#loginEmail')   \r\n       \r\n       await page.type('#loginEmail','ccjss@ccjss.com')\r\n       await page.type('#loginPassword','wrong')\r\n       await page.click('#login-submit')\r\n    }\r\n    async isInvalidloginError(){\r\n        \r\n        await page.waitForSelector('#loginEmail-error')   \r\n\r\n    }\r\n    \r\n    async OpenRegisterPage(){\r\n        \r\n     await page.click('button#registerAccount')\r\n\r\n    }\r\n\r\n}"
+        }
+    ]
+}

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 16,
+            "activePatchIndex": 18,
             "patches": [
                 {
                     "date": 1685827440750,
@@ -72,6 +72,14 @@
                 {
                     "date": 1685838975583,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n RUN npm install jest\r\n RUN npm install jest-html-reporter\r\n RUN npm jest-puppeteer\r\n RUN npm mocha\r\n+RUN npm puppeteer\r\n \r\n-\r\n COPY . .\r\n \r\n CMD [\"npm\", \"test\", \"--\"]\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685847983866,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n FROM node:14\r\n \r\n WORKDIR /app\r\n \r\n-COPY \r\n+COPY .\r\n \r\n RUN npm install @babel/core\r\n RUN npm install @babel/preset-env\r\n RUN npm install babel-jest\r\n"
+                },
+                {
+                    "date": 1685848033504,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n WORKDIR /app\r\n \r\n COPY . .\r\n \r\n-RUN npm install @babel/core --save-\r\n+RUN npm install @babel/core --save-d\r\n RUN npm install @babel/preset-env\r\n RUN npm install babel-jest\r\n RUN npm install chai\r\n RUN npm install cucumber\r\n"
                 }
             ],
             "date": 1685827440750,

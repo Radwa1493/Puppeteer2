@@ -1,0 +1,21 @@
+FROM node:14
+
+WORKDIR /app
+
+COPY . .
+
+RUN npm install @babel/core --save-dev
+RUN npm install @babel/preset-env --save-dev
+RUN npm install babel-jest --save-dev
+RUN npm install chai --save-dev
+RUN npm install cucumber --save-dev
+RUN npm install cucumber-html-reporter --save-dev
+RUN npm install jest --save-dev
+RUN npm install jest-html-reporter --save-dev
+RUN npm jest-puppeteer
+RUN npm mocha
+RUN npm puppeteer
+
+COPY . .
+
+CMD ["npm", "test", "--"]

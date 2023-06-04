@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 30,
+            "activePatchIndex": 36,
             "patches": [
                 {
                     "date": 1685809156936,
@@ -128,6 +128,30 @@
                 {
                     "date": 1685810683936,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,4 @@\n-export default class HomePage{\r\n-\r\n     import BasePage from './BasePage'\r\n \r\n     export default class HomePage extends BasePage {\r\n \r\n"
+                },
+                {
+                    "date": 1685881179915,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,22 +1,32 @@\n     import BasePage from './BasePage'\r\n-\r\n+    const elements ={\r\n+        lgoin_Buttom:'.headerElement__icon--login',\r\n+        loginEmail_TxtBox:  '#loginEmail' ,\r\n+        loginPass_TxtBox:  '#loginPassword' ,\r\n+        submit_TxtBox:  '#login-submit' ,\r\n+        error_Txt:  '#loginEmail-error' ,\r\n+    \r\n+        registration_Buttom:'button#registerAccount'\r\n+    \r\n+     }\r\n     export default class HomePage extends BasePage {\r\n \r\n     async visit(){\r\n \r\n-        await page.goto('https://www.moebel-kraft.de/'); // navigate to url \r\n+        await page.goto('https://www.moebel-kraft.de/') // navigate to url \r\n+    }  \r\n+       \r\n+    async isHomePageDisplayed(){\r\n         await page.waitForSelector(\"div.consentForm__acceptButton:nth-child(2) > button\") ;\r\n-\r\n        }\r\n-\r\n     async CloseCookies(){\r\n         await page.click(\"div.consentForm__acceptButton:nth-child(2) > button\") ;\r\n     }\r\n \r\n     async OpenProfile(){\r\n+\r\n         await page.click(\".headerElement__icon--login\") ;\r\n \r\n-       await page.waitForSelector('#loginEmail')    \r\n     }\r\n \r\n-}module.exports =  HomePage\r\n+}\r\n"
+                },
+                {
+                    "date": 1685881185786,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,12 +10,9 @@\n     \r\n      }\r\n     export default class HomePage extends BasePage {\r\n \r\n-    async visit(){\r\n-\r\n-        await page.goto('https://www.moebel-kraft.de/') // navigate to url \r\n-    }  \r\n+   \r\n        \r\n     async isHomePageDisplayed(){\r\n         await page.waitForSelector(\"div.consentForm__acceptButton:nth-child(2) > button\") ;\r\n        }\r\n"
+                },
+                {
+                    "date": 1685881339350,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,16 +10,8 @@\n     \r\n      }\r\n     export default class HomePage extends BasePage {\r\n \r\n-   \r\n-       \r\n-    async isHomePageDisplayed(){\r\n-        await page.waitForSelector(\"div.consentForm__acceptButton:nth-child(2) > button\") ;\r\n-       }\r\n-    async CloseCookies(){\r\n-        await page.click(\"div.consentForm__acceptButton:nth-child(2) > button\") ;\r\n-    }\r\n \r\n     async OpenProfile(){\r\n \r\n         await page.click(\".headerElement__icon--login\") ;\r\n"
+                },
+                {
+                    "date": 1685881359393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,29 @@\n     import BasePage from './BasePage'\r\n-    const elements ={\r\n-        lgoin_Buttom:'.headerElement__icon--login',\r\n-        loginEmail_TxtBox:  '#loginEmail' ,\r\n-        loginPass_TxtBox:  '#loginPassword' ,\r\n-        submit_TxtBox:  '#login-submit' ,\r\n-        error_Txt:  '#loginEmail-error' ,\r\n-    \r\n-        registration_Buttom:'button#registerAccount'\r\n-    \r\n-     }\r\n+const elements ={\r\n+    lgoin_Buttom:'.headerElement__icon--login',\r\n+    loginEmail_TxtBox:  '#loginEmail' ,\r\n+    loginPass_TxtBox:  '#loginPassword' ,\r\n+    submit_TxtBox:  '#login-submit' ,\r\n+    error_Txt:  '#loginEmail-error' ,\r\n+\r\n+    registration_Buttom:'button#registerAccount'\r\n+\r\n+ }\r\n     export default class HomePage extends BasePage {\r\n \r\n+    async visit(){\r\n \r\n+        await page.goto('https://www.moebel-kraft.de/') // navigate to url \r\n+    }  \r\n+       \r\n+    async isHomePageDisplayed(){\r\n+        await page.waitForSelector(\"div.consentForm__acceptButton:nth-child(2) > button\") ;\r\n+       }\r\n+    async CloseCookies(){\r\n+        await page.click(\"div.consentForm__acceptButton:nth-child(2) > button\") ;\r\n+    }\r\n+\r\n     async OpenProfile(){\r\n \r\n         await page.click(\".headerElement__icon--login\") ;\r\n \r\n"
+                },
+                {
+                    "date": 1685881366618,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,21 +1,18 @@\n     import BasePage from './BasePage'\r\n-const elements ={\r\n-    lgoin_Buttom:'.headerElement__icon--login',\r\n-    loginEmail_TxtBox:  '#loginEmail' ,\r\n-    loginPass_TxtBox:  '#loginPassword' ,\r\n-    submit_TxtBox:  '#login-submit' ,\r\n-    error_Txt:  '#loginEmail-error' ,\r\n-\r\n-    registration_Buttom:'button#registerAccount'\r\n-\r\n- }\r\n+    const elements ={\r\n+        lgoin_Buttom:'.headerElement__icon--login',\r\n+        loginEmail_TxtBox:  '#loginEmail' ,\r\n+        loginPass_TxtBox:  '#loginPassword' ,\r\n+        submit_TxtBox:  '#login-submit' ,\r\n+        error_Txt:  '#loginEmail-error' ,\r\n+    \r\n+        registration_Buttom:'button#registerAccount'\r\n+    \r\n+     }\r\n     export default class HomePage extends BasePage {\r\n \r\n-    async visit(){\r\n-\r\n-        await page.goto('https://www.moebel-kraft.de/') // navigate to url \r\n-    }  \r\n+   \r\n        \r\n     async isHomePageDisplayed(){\r\n         await page.waitForSelector(\"div.consentForm__acceptButton:nth-child(2) > button\") ;\r\n        }\r\n"
+                },
+                {
+                    "date": 1685881373170,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,11 +9,9 @@\n         registration_Buttom:'button#registerAccount'\r\n     \r\n      }\r\n     export default class HomePage extends BasePage {\r\n-\r\n-   \r\n-       \r\n+    \r\n     async isHomePageDisplayed(){\r\n         await page.waitForSelector(\"div.consentForm__acceptButton:nth-child(2) > button\") ;\r\n        }\r\n     async CloseCookies(){\r\n"
                 }
             ],
             "date": 1685809156936,

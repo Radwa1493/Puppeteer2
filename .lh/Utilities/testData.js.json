@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 23,
+            "activePatchIndex": 31,
             "patches": [
                 {
                     "date": 1685839259902,
@@ -100,6 +100,38 @@
                 {
                     "date": 1685843441393,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,12 @@\n         var text = \"\";\r\n         var charset = \"abcdefghijklmnopqrstuvwxyz\";\r\n         for (var i = 0; i < 5; i++)\r\n           text += charset.charAt(Math.floor(Math.random() * charset.length));\r\n-        return text; \r\n+       \r\n+       \r\n+       \r\n+          return text; \r\n }\r\n    \r\n export const PasswordGenerator = function(){\r\n         const length = 12; // Set the length of the password\r\n"
+                },
+                {
+                    "date": 1685878983247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,12 +3,10 @@\n export const TestDataGenerator= function(){\r\n         var text = \"\";\r\n         var charset = \"abcdefghijklmnopqrstuvwxyz\";\r\n         for (var i = 0; i < 5; i++)\r\n-          text += charset.charAt(Math.floor(Math.random() * charset.length));\r\n+          text += charset.charAt(Math.floor(Math.random() * charset.length));    \r\n        \r\n-       \r\n-       \r\n           return text; \r\n }\r\n    \r\n export const PasswordGenerator = function(){\r\n"
+                },
+                {
+                    "date": 1685881607681,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,14 @@\n export const Url =\"https://www.moebel-kraft.de/\";\r\n export const InValidPassword =\"wrongpassword\";\r\n+\r\n+\r\n+\r\n export const TestDataGenerator= function(){\r\n         var text = \"\";\r\n         var charset = \"abcdefghijklmnopqrstuvwxyz\";\r\n         for (var i = 0; i < 5; i++)\r\n           text += charset.charAt(Math.floor(Math.random() * charset.length));    \r\n-       \r\n           return text; \r\n }\r\n    \r\n export const PasswordGenerator = function(){\r\n"
+                },
+                {
+                    "date": 1685881682484,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n export const Url =\"https://www.moebel-kraft.de/\";\r\n export const InValidPassword =\"wrongpassword\";\r\n+export const InValidPassword =\"wrongpassword\";\r\n \r\n \r\n \r\n export const TestDataGenerator= function(){\r\n"
+                },
+                {
+                    "date": 1685881687985,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export const Url =\"https://www.moebel-kraft.de/\";\r\n export const InValidPassword =\"wrongpassword\";\r\n-export const InValidPassword =\"wrongpassword\";\r\n+export const Gender =\"wrongpassword\";\r\n \r\n \r\n \r\n export const TestDataGenerator= function(){\r\n"
+                },
+                {
+                    "date": 1685881699555,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export const Url =\"https://www.moebel-kraft.de/\";\r\n export const InValidPassword =\"wrongpassword\";\r\n-export const Gender =\"wrongpassword\";\r\n+export const Gender =\"frau\";\r\n \r\n \r\n \r\n export const TestDataGenerator= function(){\r\n"
+                },
+                {
+                    "date": 1685882139974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,8 @@\n export const Url =\"https://www.moebel-kraft.de/\";\r\n export const InValidPassword =\"wrongpassword\";\r\n export const Gender =\"frau\";\r\n \r\n-\r\n-\r\n export const TestDataGenerator= function(){\r\n         var text = \"\";\r\n         var charset = \"abcdefghijklmnopqrstuvwxyz\";\r\n         for (var i = 0; i < 5; i++)\r\n"
+                },
+                {
+                    "date": 1685882145450,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,7 +45,6 @@\n           }\r\n         }\r\n       \r\n         return password;\r\n-    \r\n     }    \r\n     \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685884455892,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,49 @@\n+export const Url =\"https://www.moebel-kraft.de/\";\r\n+export const InValidPassword =\"wrongpassword\";\r\n+export const Gender =\"frau\";\r\n+\r\n+export const TexGenerator= function(){\r\n+        var text = \"\";\r\n+        var charset = \"abcdefghijklmnopqrstuvwxyz\";\r\n+        for (var i = 0; i < 5; i++)\r\n+          text += charset.charAt(Math.floor(Math.random() * charset.length));    \r\n+          return text; \r\n+}\r\n+   \r\n+export const PasswordGenerator = function(){\r\n+        const length = 12; // Set the length of the password\r\n+        const lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';\r\n+        const uppercaseChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';\r\n+        const numberChars = '0123456789';\r\n+        const specialChars = '!@#$%^&*()_+-=[]{}|;:,.<>?';\r\n+      \r\n+        let password = '';\r\n+        \r\n+        // Generate at least one of each required character type\r\n+        password += lowercaseChars.charAt(Math.floor(Math.random() * lowercaseChars.length));\r\n+        password += uppercaseChars.charAt(Math.floor(Math.random() * uppercaseChars.length));\r\n+        password += numberChars.charAt(Math.floor(Math.random() * numberChars.length));\r\n+        password += specialChars.charAt(Math.floor(Math.random() * specialChars.length));\r\n+      \r\n+        // Fill up the rest of the password with random characters\r\n+        for (let i = 4; i < length; i++) {\r\n+          const charType = Math.floor(Math.random() * 4); // 0: lowercase, 1: uppercase, 2: number, 3: special\r\n+      \r\n+          switch (charType) {\r\n+            case 0:\r\n+              password += lowercaseChars.charAt(Math.floor(Math.random() * lowercaseChars.length));\r\n+              break;\r\n+            case 1:\r\n+              password += uppercaseChars.charAt(Math.floor(Math.random() * uppercaseChars.length));\r\n+              break;\r\n+            case 2:\r\n+              password += numberChars.charAt(Math.floor(Math.random() * numberChars.length));\r\n+              break;\r\n+            case 3:\r\n+              password += specialChars.charAt(Math.floor(Math.random() * specialChars.length));\r\n+              break;\r\n+          }\r\n+        }\r\n+        return password;\r\n+    }    \r\n+    \n\\ No newline at end of file\n"
                 }
             ],
             "date": 1685839259902,
