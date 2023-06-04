@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 36,
+            "activePatchIndex": 52,
             "patches": [
                 {
                     "date": 1685809156936,
@@ -152,6 +152,70 @@
                 {
                     "date": 1685881373170,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,11 +9,9 @@\n         registration_Buttom:'button#registerAccount'\r\n     \r\n      }\r\n     export default class HomePage extends BasePage {\r\n-\r\n-   \r\n-       \r\n+    \r\n     async isHomePageDisplayed(){\r\n         await page.waitForSelector(\"div.consentForm__acceptButton:nth-child(2) > button\") ;\r\n        }\r\n     async CloseCookies(){\r\n"
+                },
+                {
+                    "date": 1685902063991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n     import BasePage from './BasePage'\r\n     const elements ={\r\n-        lgoin_Buttom:'.headerElement__icon--login',\r\n+        Cookies_Buttom:'.headerElement__icon--login',\r\n         loginEmail_TxtBox:  '#loginEmail' ,\r\n         loginPass_TxtBox:  '#loginPassword' ,\r\n         submit_TxtBox:  '#login-submit' ,\r\n         error_Txt:  '#loginEmail-error' ,\r\n"
+                },
+                {
+                    "date": 1685902070380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n      }\r\n     export default class HomePage extends BasePage {\r\n     \r\n     async isHomePageDisplayed(){\r\n-        await page.waitForSelector(\"div.consentForm__acceptButton:nth-child(2) > button\") ;\r\n+        await page.waitForSelector(\"\") ;\r\n        }\r\n     async CloseCookies(){\r\n         await page.click(\"div.consentForm__acceptButton:nth-child(2) > button\") ;\r\n     }\r\n"
+                },
+                {
+                    "date": 1685902078287,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n     import BasePage from './BasePage'\r\n     const elements ={\r\n-        Cookies_Buttom:'.headerElement__icon--login',\r\n+        Cookies_Buttom:'div.consentForm__acceptButton:nth-child(2) > button',\r\n         loginEmail_TxtBox:  '#loginEmail' ,\r\n         loginPass_TxtBox:  '#loginPassword' ,\r\n         submit_TxtBox:  '#login-submit' ,\r\n         error_Txt:  '#loginEmail-error' ,\r\n"
+                },
+                {
+                    "date": 1685902087016,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n      }\r\n     export default class HomePage extends BasePage {\r\n     \r\n     async isHomePageDisplayed(){\r\n-        await page.waitForSelector(\"\") ;\r\n+        await page.waitForSelector(elements.Cookies_Buttom) ;\r\n        }\r\n     async CloseCookies(){\r\n         await page.click(\"div.consentForm__acceptButton:nth-child(2) > button\") ;\r\n     }\r\n"
+                },
+                {
+                    "date": 1685902099164,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     async isHomePageDisplayed(){\r\n         await page.waitForSelector(elements.Cookies_Buttom) ;\r\n        }\r\n     async CloseCookies(){\r\n-        await page.click(\"div.consentForm__acceptButton:nth-child(2) > button\") ;\r\n+        await page.click(elements.Cookies_Buttom) ;\r\n     }\r\n \r\n     async OpenProfile(){\r\n \r\n"
+                },
+                {
+                    "date": 1685902109624,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n     import BasePage from './BasePage'\r\n     const elements ={\r\n         Cookies_Buttom:'div.consentForm__acceptButton:nth-child(2) > button',\r\n-        loginEmail_TxtBox:  '#loginEmail' ,\r\n+        Cookies_Buttom:  '#loginEmail' ,\r\n         loginPass_TxtBox:  '#loginPassword' ,\r\n         submit_TxtBox:  '#login-submit' ,\r\n         error_Txt:  '#loginEmail-error' ,\r\n     \r\n"
+                },
+                {
+                    "date": 1685902115302,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n     import BasePage from './BasePage'\r\n     const elements ={\r\n         Cookies_Buttom:'div.consentForm__acceptButton:nth-child(2) > button',\r\n-        Cookies_Buttom:  '#loginEmail' ,\r\n+        Profil_Buttom:  '#loginEmail' ,\r\n         loginPass_TxtBox:  '#loginPassword' ,\r\n         submit_TxtBox:  '#login-submit' ,\r\n         error_Txt:  '#loginEmail-error' ,\r\n     \r\n"
+                },
+                {
+                    "date": 1685902123787,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n     import BasePage from './BasePage'\r\n     const elements ={\r\n         Cookies_Buttom:'div.consentForm__acceptButton:nth-child(2) > button',\r\n-        Profil_Buttom:  '#loginEmail' ,\r\n-        loginPass_TxtBox:  '#loginPassword' ,\r\n+        Profile_Buttom:  '#loginEmail' ,\r\n+        login_TxtBox:  '#loginPassword' ,\r\n         submit_TxtBox:  '#login-submit' ,\r\n         error_Txt:  '#loginEmail-error' ,\r\n     \r\n         registration_Buttom:'button#registerAccount'\r\n"
+                },
+                {
+                    "date": 1685902129983,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n     import BasePage from './BasePage'\r\n     const elements ={\r\n         Cookies_Buttom:'div.consentForm__acceptButton:nth-child(2) > button',\r\n         Profile_Buttom:  '#loginEmail' ,\r\n-        login_TxtBox:  '#loginPassword' ,\r\n+        loginstatus_:  '#loginPassword' ,\r\n         submit_TxtBox:  '#login-submit' ,\r\n         error_Txt:  '#loginEmail-error' ,\r\n     \r\n         registration_Buttom:'button#registerAccount'\r\n"
+                },
+                {
+                    "date": 1685902153645,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,11 @@\n     import BasePage from './BasePage'\r\n     const elements ={\r\n         Cookies_Buttom:'div.consentForm__acceptButton:nth-child(2) > button',\r\n         Profile_Buttom:  '#loginEmail' ,\r\n-        loginstatus_:  '#loginPassword' ,\r\n-        submit_TxtBox:  '#login-submit' ,\r\n-        error_Txt:  '#loginEmail-error' ,\r\n+        loginstatus_Flag:  '#loginPassword' ,\r\n+       \r\n     \r\n-        registration_Buttom:'button#registerAccount'\r\n-    \r\n      }\r\n     export default class HomePage extends BasePage {\r\n     \r\n     async isHomePageDisplayed(){\r\n"
+                },
+                {
+                    "date": 1685902162380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n     import BasePage from './BasePage'\r\n     const elements ={\r\n         Cookies_Buttom:'div.consentForm__acceptButton:nth-child(2) > button',\r\n         Profile_Buttom:  '#loginEmail' ,\r\n-        loginstatus_Flag:  '#loginPassword' ,\r\n+        loginstatus_Flag:  '.headerElement__status--login' ,\r\n        \r\n     \r\n      }\r\n     export default class HomePage extends BasePage {\r\n"
+                },
+                {
+                    "date": 1685902168275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,8 @@\n     const elements ={\r\n         Cookies_Buttom:'div.consentForm__acceptButton:nth-child(2) > button',\r\n         Profile_Buttom:  '#loginEmail' ,\r\n         loginstatus_Flag:  '.headerElement__status--login' ,\r\n-       \r\n     \r\n      }\r\n     export default class HomePage extends BasePage {\r\n     \r\n"
+                },
+                {
+                    "date": 1685902195268,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     }\r\n \r\n     async OpenProfile(){\r\n \r\n-        await page.click(\".headerElement__icon--login\") ;\r\n+        await page.click(\"\") ;\r\n \r\n     }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1685902201306,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n     import BasePage from './BasePage'\r\n     const elements ={\r\n         Cookies_Buttom:'div.consentForm__acceptButton:nth-child(2) > button',\r\n-        Profile_Buttom:  '#loginEmail' ,\r\n+        Profile_Buttom:  'ail' ,\r\n         loginstatus_Flag:  '.headerElement__status--login' ,\r\n     \r\n      }\r\n     export default class HomePage extends BasePage {\r\n@@ -15,9 +15,9 @@\n     }\r\n \r\n     async OpenProfile(){\r\n \r\n-        await page.click(\"\") ;\r\n+        await page.click() ;\r\n \r\n     }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1685902217380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     }\r\n \r\n     async OpenProfile(){\r\n \r\n-        await page.click(elements) ;\r\n+        await page.click(elements.) ;\r\n \r\n     }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1685902230951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,6 +19,8 @@\n         await page.click(elements.Profile_Buttom) ;\r\n \r\n     }\r\n \r\n-    \r\n+    async isHomePageDisplayed(){\r\n+        await page.waitForSelector(elements.Cookies_Buttom) ;\r\n+       }\r\n }\r\n"
                 }
             ],
             "date": 1685809156936,

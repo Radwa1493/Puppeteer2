@@ -43,7 +43,7 @@ defineFeature(registerfeature, test => {
 
     });
 
-    then('Homepage displayed',  async function ()   {
+    then('Login status flag displayed',  async function ()   {
   
     });
 

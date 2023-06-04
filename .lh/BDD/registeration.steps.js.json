@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 9,
+            "activePatchIndex": 32,
             "patches": [
                 {
                     "date": 1685879557888,
@@ -44,6 +44,98 @@
                 {
                     "date": 1685882384413,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n import { defineFeature, loadFeature } from 'jest-cucumber';\r\n-const TestDataGenerator = require('../Utilities/TestDataGenerator.js')\r\n const TestDate = require('../Utilities/testData.js')\r\n \r\n import HomePage from '../pages/HomePage'\r\n import ProfilePage from '../pages/ProfilePage';\r\n"
+                },
+                {
+                    "date": 1685902642371,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,54 @@\n+import { defineFeature, loadFeature } from 'jest-cucumber';\r\n+const TestDate = require('../Utilities/testData.js')\r\n+\r\n+import HomePage from '../pages/HomePage'\r\n+import ProfilePage from '../pages/ProfilePage';\r\n+import RegistionPage from '../pages/RegistionPage';\r\n+\r\n+\r\n+let homePage \r\n+let profilePage \r\n+let registionPage\r\n+//const loginfeature = loadFeature('BDD/features/2-Login.feature');\r\n+const registerfeature = loadFeature('BDD/features/1-Registration.feature');\r\n+\r\n+defineFeature(registerfeature, test => {\r\n+\r\n+    jest.setTimeout(1000000); // increase defult timeout from 5000\r\n+\r\n+    beforeAll(async function() {\r\n+        await page.setViewport({ width: 1266, height: 768}); // set screen size\r\n+        homePage  = new HomePage()\r\n+        profilePage  = new ProfilePage()\r\n+        registionPage  = new RegistionPage()\r\n+        await page.goto(TestDate.Url) // navigate to url \r\n+        await homePage.isHomePageDisplayed()\r\n+        await homePage.CloseCookies()\r\n+   \r\n+    })\r\n+\r\n+  test('New user Registraion', ({ given, when, and, then }) => {\r\n+    given('Open Profile Page',  async function ()   {\r\n+        await homePage.OpenProfile()\r\n+        await profilePage.isLoginPageDisplayed()\r\n+    });\r\n+\r\n+    when('Open Registration Page',  async function ()   {\r\n+        await registionPage.openRegisterPage()\r\n+        await registionPage.isRegisterPageDisplayed()\r\n+    });\r\n+\r\n+    and('Fill New user data',  async function ()   {\r\n+        await registionPage.enterNewUserData()\r\n+\r\n+    });\r\n+\r\n+    then('L',  async function ()   {\r\n+  \r\n+    });\r\n+\r\n+    and('New user created', () => {\r\n+\r\n+    });\r\n+});\r\n+})\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685902658532,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,67 +42,13 @@\n         await registionPage.enterNewUserData()\r\n \r\n     });\r\n \r\n-    then('L',  async function ()   {\r\n+    then('Login status flag displayed',  async function ()   {\r\n   \r\n     });\r\n \r\n     and('New user created', () => {\r\n \r\n     });\r\n });\r\n-})\n-import { defineFeature, loadFeature } from 'jest-cucumber';\r\n-const TestDate = require('../Utilities/testData.js')\r\n-\r\n-import HomePage from '../pages/HomePage'\r\n-import ProfilePage from '../pages/ProfilePage';\r\n-import RegistionPage from '../pages/RegistionPage';\r\n-\r\n-\r\n-let homePage \r\n-let profilePage \r\n-let registionPage\r\n-//const loginfeature = loadFeature('BDD/features/2-Login.feature');\r\n-const registerfeature = loadFeature('BDD/features/1-Registration.feature');\r\n-\r\n-defineFeature(registerfeature, test => {\r\n-\r\n-    jest.setTimeout(1000000); // increase defult timeout from 5000\r\n-\r\n-    beforeAll(async function() {\r\n-        await page.setViewport({ width: 1266, height: 768}); // set screen size\r\n-        homePage  = new HomePage()\r\n-        profilePage  = new ProfilePage()\r\n-        registionPage  = new RegistionPage()\r\n-        await page.goto(TestDate.Url) // navigate to url \r\n-        await homePage.isHomePageDisplayed()\r\n-        await homePage.CloseCookies()\r\n-   \r\n-    })\r\n-\r\n-  test('New user Registraion', ({ given, when, and, then }) => {\r\n-    given('Open Profile Page',  async function ()   {\r\n-        await homePage.OpenProfile()\r\n-        await profilePage.isLoginPageDisplayed()\r\n-    });\r\n-\r\n-    when('Open Registration Page',  async function ()   {\r\n-        await registionPage.openRegisterPage()\r\n-        await registionPage.isRegisterPageDisplayed()\r\n-    });\r\n-\r\n-    and('Fill New user data',  async function ()   {\r\n-        await registionPage.enterNewUserData()\r\n-\r\n-    });\r\n-\r\n-    then('Homepage displayed',  async function ()   {\r\n-  \r\n-    });\r\n-\r\n-    and('New user created', () => {\r\n-\r\n-    });\r\n-});\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685902664914,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,7 @@\n     then('Login status flag displayed',  async function ()   {\r\n   \r\n     });\r\n \r\n-    and('New user created', () => {\r\n \r\n-    });\r\n });\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685902677505,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n \r\n     });\r\n \r\n     then('Login status flag displayed',  async function ()   {\r\n-  \r\n+        expect(element).not.toBeNull();\r\n     });\r\n \r\n \r\n });\r\n"
+                },
+                {
+                    "date": 1685902683359,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n \r\n     });\r\n \r\n     then('Login status flag displayed',  async function ()   {\r\n-        expect(element).not.toBeNull();\r\n+        expect(registionPage.).not.toBeNull();\r\n     });\r\n \r\n \r\n });\r\n"
+                },
+                {
+                    "date": 1685902785718,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n \r\n     });\r\n \r\n     then('Login status flag displayed',  async function ()   {\r\n-        expect(registionPage.).not.toBeNull();\r\n+        expect(registionPage.elements.).not.toBeNull();\r\n     });\r\n \r\n \r\n });\r\n"
+                },
+                {
+                    "date": 1685902795811,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n \r\n     });\r\n \r\n     then('Login status flag displayed',  async function ()   {\r\n-        expect(registionPage.elements.).not.toBeNull();\r\n+        expect(registionPage.elements.elements.).not.toBeNull();\r\n     });\r\n \r\n \r\n });\r\n"
+                },
+                {
+                    "date": 1685902876632,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n \r\n     });\r\n \r\n     then('Login status flag displayed',  async function ()   {\r\n-        expect(registionPage.elements.elements.).not.toBeNull();\r\n+        expect(registionPage.elements.loginstatus_Flag).not.toBeNull();\r\n     });\r\n \r\n \r\n });\r\n"
+                },
+                {
+                    "date": 1685902886688,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n \r\n     });\r\n \r\n     then('Login status flag displayed',  async function ()   {\r\n-        expect(registionPage.elements.loginstatus_Flag).not.toBeNull();\r\n+        expect(registionPage.elements.loginstatus_Flag).toBeNull();\r\n     });\r\n \r\n \r\n });\r\n"
+                },
+                {
+                    "date": 1685902896865,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,8 +45,6 @@\n \r\n     then('Login status flag displayed',  async function ()   {\r\n         expect(registionPage.elements.loginstatus_Flag).toBeNull();\r\n     });\r\n-\r\n-\r\n });\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685903091520,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,8 +43,8 @@\n \r\n     });\r\n \r\n     then('Login status flag displayed',  async function ()   {\r\n-        expect(registionPage.elements.loginstatus_Flag).toBeNull();\r\n+        expect(registionPage.elements.loginstatus_Flag).notoBeNull();\r\n     });\r\n });\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685903100940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,8 +43,8 @@\n \r\n     });\r\n \r\n     then('Login status flag displayed',  async function ()   {\r\n-        expect(registionPage.elements.loginstatus_Flag).notoBeNull();\r\n+        expect(registionPage.elements.loginstatus_Flag).not.toBeNull();\r\n     });\r\n });\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685903206736,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,8 +43,8 @@\n \r\n     });\r\n \r\n     then('Login status flag displayed',  async function ()   {\r\n-        expect(registionPage.elements.loginstatus_Flag).not.toBeNull();\r\n+        expect(hom.elements.loginstatus_Flag).not.toBeNull();\r\n     });\r\n });\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685903216111,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,8 +43,8 @@\n \r\n     });\r\n \r\n     then('Login status flag displayed',  async function ()   {\r\n-        expect(hom.elements.loginstatus_Flag).not.toBeNull();\r\n+        expect(homePage.elements.loginstatus_Flag).not.toBeNull();\r\n     });\r\n });\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685903222152,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,8 +43,8 @@\n \r\n     });\r\n \r\n     then('Login status flag displayed',  async function ()   {\r\n-        expect(homePage.elements.loginstatus_Flag).not.toBeNull();\r\n+        expect(homePage.elements..elements.loginstatus_Flag).not.toBeNull();\r\n     });\r\n });\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685903227399,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,8 +43,8 @@\n \r\n     });\r\n \r\n     then('Login status flag displayed',  async function ()   {\r\n-        expect(homePage.elements..elements.loginstatus_Flag).not.toBeNull();\r\n+        expect(homePage.elements.loginstatus_Flag.elements.loginstatus_Flag).not.toBeNull();\r\n     });\r\n });\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685903235454,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,8 +43,8 @@\n \r\n     });\r\n \r\n     then('Login status flag displayed',  async function ()   {\r\n-        expect(homePage.elements.loginstatus_Flag.elements.loginstatus_Flag).not.toBeNull();\r\n+        expect(homePage.elements.loginstatus_Flag).toBeNull();\r\n     });\r\n });\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685903307574,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,8 @@\n     });\r\n \r\n     and('Fill New user data',  async function ()   {\r\n         await registionPage.enterNewUserData()\r\n-\r\n     });\r\n \r\n     then('Login status flag displayed',  async function ()   {\r\n         expect(homePage.elements.loginstatus_Flag).toBeNull();\r\n"
+                },
+                {
+                    "date": 1685903388873,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,8 +42,8 @@\n         await registionPage.enterNewUserData()\r\n     });\r\n \r\n     then('Login status flag displayed',  async function ()   {\r\n-        expect(homePage.elements.loginstatus_Flag).toBeNull();\r\n+        expect(homePage.elements.loginstatus_Flag).not.toBeNull();\r\n     });\r\n });\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685903496415,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,49 @@\n+import { defineFeature, loadFeature } from 'jest-cucumber';\r\n+const TestDate = require('../Utilities/testData.js')\r\n+\r\n+import HomePage from '../pages/HomePage'\r\n+import ProfilePage from '../pages/ProfilePage';\r\n+import RegistionPage from '../pages/RegistionPage';\r\n+\r\n+\r\n+let homePage \r\n+let profilePage \r\n+let registionPage\r\n+//const loginfeature = loadFeature('BDD/features/2-Login.feature');\r\n+const registerfeature = loadFeature('BDD/features/1-Registration.feature');\r\n+\r\n+defineFeature(registerfeature, test => {\r\n+\r\n+    jest.setTimeout(1000000); // increase defult timeout from 5000\r\n+\r\n+    beforeAll(async function() {\r\n+        await page.setViewport({ width: 1266, height: 768}); // set screen size\r\n+        homePage  = new HomePage()\r\n+        profilePage  = new ProfilePage()\r\n+        registionPage  = new RegistionPage()\r\n+        await page.goto(TestDate.Url) // navigate to url \r\n+        await homePage.isHomePageDisplayed()\r\n+        await homePage.CloseCookies()\r\n+   \r\n+    })\r\n+\r\n+  test('New user Registraion', ({ given, when, and, then }) => {\r\n+    given('Open Profile Page',  async function ()   {\r\n+        await homePage.OpenProfile()\r\n+        await profilePage.isLoginPageDisplayed()\r\n+    });\r\n+\r\n+    when('Open Registration Page',  async function ()   {\r\n+        await registionPage.openRegisterPage()\r\n+        await registionPage.isRegisterPageDisplayed()\r\n+    });\r\n+\r\n+    and('Fill New user data',  async function ()   {\r\n+        await registionPage.enterNewUserData()\r\n+    });\r\n+\r\n+    then('Login status flag displayed',  async function ()   {\r\n+      await  expect(homePage.elements.loginstatus_Flag).not.toBeNull();\r\n+    });\r\n+});\r\n+})\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685903630380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,57 +42,7 @@\n         await registionPage.enterNewUserData()\r\n     });\r\n \r\n     then('Login status flag displayed',  async function ()   {\r\n-      await  expect(homePage.elements.loginstatus_Flag).not.toBeNull();\r\n     });\r\n });\r\n-})\n-import { defineFeature, loadFeature } from 'jest-cucumber';\r\n-const TestDate = require('../Utilities/testData.js')\r\n-\r\n-import HomePage from '../pages/HomePage'\r\n-import ProfilePage from '../pages/ProfilePage';\r\n-import RegistionPage from '../pages/RegistionPage';\r\n-\r\n-\r\n-let homePage \r\n-let profilePage \r\n-let registionPage\r\n-//const loginfeature = loadFeature('BDD/features/2-Login.feature');\r\n-const registerfeature = loadFeature('BDD/features/1-Registration.feature');\r\n-\r\n-defineFeature(registerfeature, test => {\r\n-\r\n-    jest.setTimeout(1000000); // increase defult timeout from 5000\r\n-\r\n-    beforeAll(async function() {\r\n-        await page.setViewport({ width: 1266, height: 768}); // set screen size\r\n-        homePage  = new HomePage()\r\n-        profilePage  = new ProfilePage()\r\n-        registionPage  = new RegistionPage()\r\n-        await page.goto(TestDate.Url) // navigate to url \r\n-        await homePage.isHomePageDisplayed()\r\n-        await homePage.CloseCookies()\r\n-   \r\n-    })\r\n-\r\n-  test('New user Registraion', ({ given, when, and, then }) => {\r\n-    given('Open Profile Page',  async function ()   {\r\n-        await homePage.OpenProfile()\r\n-        await profilePage.isLoginPageDisplayed()\r\n-    });\r\n-\r\n-    when('Open Registration Page',  async function ()   {\r\n-        await registionPage.openRegisterPage()\r\n-        await registionPage.isRegisterPageDisplayed()\r\n-    });\r\n-\r\n-    and('Fill New user data',  async function ()   {\r\n-        await registionPage.enterNewUserData()\r\n-    });\r\n-\r\n-    then('Login status flag displayed',  async function ()   {\r\n-        expect(homePage.elements.loginstatus_Flag).not.toBeNull();\r\n-    });\r\n-});\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685903657054,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,8 +42,8 @@\n         await registionPage.enterNewUserData()\r\n     });\r\n \r\n     then('Login status flag displayed',  async function ()   {\r\n-        home\r\n+        homePage\r\n     });\r\n });\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685910668938,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,51 @@\n+import { defineFeature, loadFeature } from 'jest-cucumber';\r\n+const TestDate = require('../Utilities/testData.js')\r\n+\r\n+import HomePage from '../pages/HomePage'\r\n+import ProfilePage from '../pages/ProfilePage';\r\n+import RegistionPage from '../pages/RegistionPage';\r\n+\r\n+\r\n+let homePage \r\n+let profilePage \r\n+let registionPage\r\n+//const loginfeature = loadFeature('BDD/features/2-Login.feature');\r\n+const registerfeature = loadFeature('BDD/features/1-Registration.feature');\r\n+\r\n+defineFeature(registerfeature, test => {\r\n+\r\n+    jest.setTimeout(1000000); // increase defult timeout from 5000\r\n+\r\n+    beforeAll(async function() {\r\n+        await page.setViewport({ width: 1266, height: 768}); // set screen size\r\n+        homePage  = new HomePage()\r\n+        profilePage  = new ProfilePage()\r\n+        registionPage  = new RegistionPage()\r\n+        await page.goto(TestDate.Url) // navigate to url \r\n+        await homePage.isHomePageDisplayed()\r\n+        await homePage.CloseCookies()\r\n+   \r\n+    })\r\n+\r\n+  test('New user Registraion', ({ given, when, and, then }) => {\r\n+    given('Open Profile Page',  async function ()   {\r\n+        await homePage.OpenProfile()\r\n+        await profilePage.isLoginPageDisplayed()\r\n+    });\r\n+\r\n+    when('Open Registration Page',  async function ()   {\r\n+        await registionPage.openRegisterPage()\r\n+        await registionPage.isRegisterPageDisplayed()\r\n+    });\r\n+\r\n+    and('Fill New user data',  async function ()   {\r\n+        await registionPage.enterNewUserData()\r\n+    });\r\n+\r\n+    then('Login status flag displayed',  async function ()   {\r\n+        await homePage.isloginstatusDisplayed()\r\n+        expect(homePage.elements.loginstatus_Flag).not.toBeNull();\r\n+\r\n+    });\r\n+});\r\n+})\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1685879557888,

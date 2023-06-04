@@ -1,0 +1,54 @@
+{
+    "sourceFile": "BDD/features/Feature.feature",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1685912782211,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1685913142751,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n         And Open Profile Page\r\n         And Logout\r\n \r\n \r\n-    Scenario: User can't login with invalid credincials\r\n+#    Scenario: User can't login with invalid credincials\r\n         Given Open Profile Page\r\n         When Enter Invalid credincials\r\n         Then An error displayed \r\n \r\n@@ -18,5 +18,4 @@\n         Given Open Profile Page\r\n         When Enter valid credincials\r\n         Then Login status flag displayed\r\n \r\n-        \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685913150391,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,13 +9,13 @@\n         And Logout\r\n \r\n \r\n #    Scenario: User can't login with invalid credincials\r\n-        Given Open Profile Page\r\n-        When Enter Invalid credincials\r\n-        Then An error displayed \r\n+#        Given Open Profile Page\r\n+#        When Enter Invalid credincials\r\n+#        Then An error displayed \r\n \r\n-    Scenario: User login with valid credincials\r\n-        Given Open Profile Page\r\n-        When Enter valid credincials\r\n-        Then Login status flag displayed\r\n+ #   Scenario: User login with valid credincials\r\n+ #       Given Open Profile Page\r\n+ #       When Enter valid credincials\r\n+ #       Then Login status flag displayed\r\n \r\n"
+                },
+                {
+                    "date": 1685913933025,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n         Given Open Profile Page\r\n         When Open Registration Page\r\n         And Fill New user data\r\n         Then Login status flag displayed\r\n-        And Open Profile Page\r\n+        And Open user Profile Page\r\n         And Logout\r\n \r\n \r\n #    Scenario: User can't login with invalid credincials\r\n"
+                },
+                {
+                    "date": 1685915667417,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,21 @@\n+Feature: Login\r\n+\r\n+    Scenario: New user Registraion \r\n+        Given Open Profile Page\r\n+        When Open Registration Page\r\n+        And Fill New user data\r\n+        Then Login status flag displayed\r\n+  #      And Open user Profile\r\n+        And Logout\r\n+\r\n+\r\n+#    Scenario: User can't login with invalid credincials\r\n+#        Given Open Profile Page\r\n+#        When Enter Invalid credincials\r\n+#        Then An error displayed \r\n+\r\n+ #   Scenario: User login with valid credincials\r\n+ #       Given Open Profile Page\r\n+ #       When Enter valid credincials\r\n+ #       Then Login status flag displayed\r\n+\r\n"
+                },
+                {
+                    "date": 1685915697993,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,25 +18,4 @@\n  #       Given Open Profile Page\r\n  #       When Enter valid credincials\r\n  #       Then Login status flag displayed\r\n \r\n-Feature: Login\r\n-\r\n-    Scenario: New user Registraion \r\n-        Given Open Profile Page\r\n-        When Open Registration Page\r\n-        And Fill New user data\r\n-        Then Login status flag displayed\r\n-        And Open user Profile Page\r\n-        And Logout\r\n-\r\n-\r\n-#    Scenario: User can't login with invalid credincials\r\n-#        Given Open Profile Page\r\n-#        When Enter Invalid credincials\r\n-#        Then An error displayed \r\n-\r\n- #   Scenario: User login with valid credincials\r\n- #       Given Open Profile Page\r\n- #       When Enter valid credincials\r\n- #       Then Login status flag displayed\r\n-\r\n"
+                },
+                {
+                    "date": 1685916027613,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n         When Open Registration Page\r\n         And Fill New user data\r\n         Then Login status flag displayed\r\n   #      And Open user Profile\r\n-        And Logout\r\n+  #      And Logout\r\n \r\n \r\n #    Scenario: User can't login with invalid credincials\r\n #        Given Open Profile Page\r\n"
+                },
+                {
+                    "date": 1685916393826,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,21 @@\n+Feature: Login\r\n+\r\n+    Scenario: New user Registraion \r\n+        Given Open Profile Page\r\n+        When Open Registration Page\r\n+        And Fill New user data\r\n+        Then Login status flag displayed\r\n+        And Open user Profile\r\n+  #      And Logout\r\n+\r\n+\r\n+#    Scenario: User can't login with invalid credincials\r\n+#        Given Open Profile Page\r\n+#        When Enter Invalid credincials\r\n+#        Then An error displayed \r\n+\r\n+ #   Scenario: User login with valid credincials\r\n+ #       Given Open Profile Page\r\n+ #       When Enter valid credincials\r\n+ #       Then Login status flag displayed\r\n+\r\n"
+                },
+                {
+                    "date": 1685916852205,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-Feature: Login\r\n+Feature: Registraion\r\n \r\n     Scenario: New user Registraion \r\n         Given Open Profile Page\r\n         When Open Registration Page\r\n@@ -18,25 +18,4 @@\n  #       Given Open Profile Page\r\n  #       When Enter valid credincials\r\n  #       Then Login status flag displayed\r\n \r\n-Feature: Login\r\n-\r\n-    Scenario: New user Registraion \r\n-        Given Open Profile Page\r\n-        When Open Registration Page\r\n-        And Fill New user data\r\n-        Then Login status flag displayed\r\n-  #      And Open user Profile\r\n-  #      And Logout\r\n-\r\n-\r\n-#    Scenario: User can't login with invalid credincials\r\n-#        Given Open Profile Page\r\n-#        When Enter Invalid credincials\r\n-#        Then An error displayed \r\n-\r\n- #   Scenario: User login with valid credincials\r\n- #       Given Open Profile Page\r\n- #       When Enter valid credincials\r\n- #       Then Login status flag displayed\r\n-\r\n"
+                },
+                {
+                    "date": 1685916882768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,13 @@\n-Feature: Registraion\r\n+Feature: moebel\r\n \r\n     Scenario: New user Registraion \r\n         Given Open Profile Page\r\n         When Open Registration Page\r\n         And Fill New user data\r\n         Then Login status flag displayed\r\n         And Open user Profile\r\n-  #      And Logout\r\n+        And Logout\r\n \r\n \r\n #    Scenario: User can't login with invalid credincials\r\n #        Given Open Profile Page\r\n"
+                }
+            ],
+            "date": 1685912782211,
+            "name": "Commit-0",
+            "content": "Feature: Login\r\n\r\n    Scenario: New user Registraion \r\n        Given Open Profile Page\r\n        When Open Registration Page\r\n        And Fill New user data\r\n        Then Login status flag displayed\r\n        And Open Profile Page\r\n        And Logout\r\n\r\n\r\n    Scenario: User can't login with invalid credincials\r\n        Given Open Profile Page\r\n        When Enter Invalid credincials\r\n        Then An error displayed \r\n\r\n    Scenario: User login with valid credincials\r\n        Given Open Profile Page\r\n        When Enter valid credincials\r\n        Then Login status flag displayed\r\n\r\n        "
+        }
+    ]
+}

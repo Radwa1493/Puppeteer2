@@ -1,0 +1,70 @@
+{
+    "sourceFile": "pages/BasePage.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 13,
+            "patches": [
+                {
+                    "date": 1685914317887,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1685914324340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,7 +14,11 @@\n     return await page.url();\r\n \r\n }\r\n \r\n+async getUrl(){\r\n \r\n+  return await page.url();\r\n \r\n+}\r\n+\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685914332220,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     return await page.url();\r\n \r\n }\r\n \r\n-async getUrl(){\r\n+async Scrollto(){\r\n \r\n   return await page.url();\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1685914341092,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     return await page.url();\r\n \r\n }\r\n \r\n-async Scrollto(){\r\n+async ScrolltoElemeny(e){\r\n \r\n   return await page.url();\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1685914362872,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,13 @@\n }\r\n \r\n async ScrolltoElemeny(e){\r\n \r\n-  return await page.url();\r\n+  await page.waitForSelector(selector);\r\n \r\n+  await page.evaluate((selector) => {\r\n+    const element = document.querySelector(selector);\r\n+    element.scrollIntoView();\r\n+  }, selector\r\n }\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685914372867,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n async ScrolltoElemeny(e){\r\n \r\n   await page.waitForSelector(selector);\r\n \r\n-  await page.evaluate((selector) => {\r\n+\r\n     const element = document.querySelector(selector);\r\n     element.scrollIntoView();\r\n   }, selector\r\n }\r\n"
+                },
+                {
+                    "date": 1685914456363,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,13 +16,9 @@\n }\r\n \r\n async ScrolltoElemeny(e){\r\n \r\n-  await page.waitForSelector(selector);\r\n-\r\n-\r\n-    const element = document.querySelector(selector);\r\n-    element.scrollIntoView();\r\n-  }, selector\r\n+  const element = document.querySelector('#my-element');\r\n+  element.scrollIntoView();\r\n }\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685914461487,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n }\r\n \r\n async ScrolltoElemeny(e){\r\n \r\n-  const element = document.querySelector('#my-element');\r\n+  document.querySelector('#my-element');\r\n   element.scrollIntoView();\r\n }\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685914469987,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n }\r\n \r\n async ScrolltoElemeny(e){\r\n \r\n-  document.querySelector('#my-element');\r\n+  c e = document.querySelector('#my-element');\r\n   element.scrollIntoView();\r\n }\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685914476256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n }\r\n \r\n async ScrolltoElemeny(e){\r\n \r\n-  c e = document.querySelector('#my-element');\r\n+  const element = document.querySelector('#my-element');\r\n   element.scrollIntoView();\r\n }\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685914482931,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n }\r\n \r\n async ScrolltoElemeny(e){\r\n \r\n-  const element = document.querySelector('#my-element');\r\n+  const element = document.querySelector(e);\r\n   element.scrollIntoView();\r\n }\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685914518831,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     return await page.url();\r\n \r\n }\r\n \r\n-async ScrolltoElemeny(e){\r\n+async ScrolltoElement(e){\r\n \r\n   const element = document.querySelector(e);\r\n   element.scrollIntoView();\r\n }\r\n"
+                },
+                {
+                    "date": 1685915916708,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,24 @@\n+export default class BasePage{\r\n+async wait(time){\r\n+\r\n+    await page.waitFor(time);\r\n+\r\n+}\r\n+async getTitle(){\r\n+\r\n+    return await page.title();\r\n+\r\n+}\r\n+async getUrl(){\r\n+\r\n+    return await page.url();\r\n+\r\n+}\r\n+\r\n+async ScrolltoElement(e){\r\n+\r\n+  const element = document.getElementById('my-element');\r\n+  element.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });\r\n+}\r\n+\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685915925917,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,33 +16,9 @@\n }\r\n \r\n async ScrolltoElement(e){\r\n \r\n-  const element = document.getElementById('my-element');\r\n+  const element = document.getElementById(e);\r\n   element.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });\r\n }\r\n \r\n-}\n-export default class BasePage{\r\n-async wait(time){\r\n-\r\n-    await page.waitFor(time);\r\n-\r\n-}\r\n-async getTitle(){\r\n-\r\n-    return await page.title();\r\n-\r\n-}\r\n-async getUrl(){\r\n-\r\n-    return await page.url();\r\n-\r\n-}\r\n-\r\n-async ScrolltoElement(e){\r\n-\r\n-  const element = document.querySelector(e);\r\n-  element.scrollIntoView();\r\n-}\r\n-\r\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1685914317887,
+            "name": "Commit-0",
+            "content": "export default class BasePage{\r\nasync wait(time){\r\n\r\n    await page.waitFor(time);\r\n\r\n}\r\nasync getTitle(){\r\n\r\n    return await page.title();\r\n\r\n}\r\nasync getUrl(){\r\n\r\n    return await page.url();\r\n\r\n}\r\n\r\n\r\n\r\n}"
+        }
+    ]
+}
