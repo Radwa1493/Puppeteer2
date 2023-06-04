@@ -1,0 +1,66 @@
+{
+    "sourceFile": "BDD/features/Login.feature",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 12,
+            "patches": [
+                {
+                    "date": 1685839987308,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1685840106809,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n Feature: Login\r\n \r\n     Scenario: User can't login with invalid credincials\r\n-        Given Close Cokkies\n\\ No newline at end of file\n+        Given OP\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685840113984,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n Feature: Login\r\n \r\n     Scenario: User can't login with invalid credincials\r\n-        Given OP\n\\ No newline at end of file\n+        Given Open Profile\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685840608971,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,5 @@\n+Feature: Login\r\n+\r\n+    Scenario: User can't login with invalid credincials\r\n+        Given Open Profile Page\r\n+        \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685840616938,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,5 @@\n Feature: Login\r\n \r\n     Scenario: User can't login with invalid credincials\r\n         Given Open Profile Page\r\n-        \n-Feature: Login\r\n-\r\n-    Scenario: User can't login with invalid credincials\r\n-        Given Open Profile\n\\ No newline at end of file\n+        Then\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685840625489,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n Feature: Login\r\n \r\n     Scenario: User can't login with invalid credincials\r\n         Given Open Profile Page\r\n-        Then\n\\ No newline at end of file\n+        When  \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685840646258,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n Feature: Login\r\n \r\n     Scenario: User can't login with invalid credincials\r\n         Given Open Profile Page\r\n-        When  \n\\ No newline at end of file\n+        When Enter Invalid cr \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685840658079,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n Feature: Login\r\n \r\n     Scenario: User can't login with invalid credincials\r\n         Given Open Profile Page\r\n-        When Enter Invalid cr \n\\ No newline at end of file\n+        When Enter Invalid credincials\r\n+        Then An error displayed \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685843552088,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,5 +2,7 @@\n \r\n     Scenario: User can't login with invalid credincials\r\n         Given Open Profile Page\r\n         When Enter Invalid credincials\r\n-        Then An error displayed \n\\ No newline at end of file\n+        Then An error displayed \r\n+\r\n+        \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685843560493,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,8 @@\n         Given Open Profile Page\r\n         When Enter Invalid credincials\r\n         Then An error displayed \r\n \r\n-        \n\\ No newline at end of file\n+        Scenario: User login with invalid credincials\r\n+        Given Open Profile Page\r\n+        When Enter Invalid credincials\r\n+        Then An error displayed \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685843569402,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,8 @@\n         Given Open Profile Page\r\n         When Enter Invalid credincials\r\n         Then An error displayed \r\n \r\n-        Scenario: User login with invalid credincials\r\n+        Scenario: User login with valid credincials\r\n         Given Open Profile Page\r\n-        When Enter Invalid credincials\r\n+        When Enter valid credincials\r\n         Then An error displayed \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685843584685,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,5 +7,5 @@\n \r\n         Scenario: User login with valid credincials\r\n         Given Open Profile Page\r\n         When Enter valid credincials\r\n-        Then An error displayed \n\\ No newline at end of file\n+        Then Hopme \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685843597388,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,5 +7,5 @@\n \r\n         Scenario: User login with valid credincials\r\n         Given Open Profile Page\r\n         When Enter valid credincials\r\n-        Then Hopme \n\\ No newline at end of file\n+        Then Homepage displayed \n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1685839987308,
+            "name": "Commit-0",
+            "content": "Feature: Login\r\n\r\n    Scenario: User can't login with invalid credincials\r\n        Given Close Cokkies"
+        }
+    ]
+}

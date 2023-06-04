@@ -1,0 +1,18 @@
+{
+    "sourceFile": "pm2.config.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1685841575909,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1685841575909,
+            "name": "Commit-0",
+            "content": "module.exports = {\r\n    apps: [\r\n      {\r\n        name: 'jest',\r\n        script: 'node_modules/.bin/jest',\r\n        args: '--runInBand',\r\n        instances: 1,\r\n        autorestart: true,\r\n        watch: false,\r\n        max_memory_restart: '1G',\r\n        env: {},\r\n      },\r\n    ],\r\n  };\r\n  "
+        }
+    ]
+}

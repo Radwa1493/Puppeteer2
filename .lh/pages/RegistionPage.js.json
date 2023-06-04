@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 12,
             "patches": [
                 {
                     "date": 1685820080578,
@@ -12,6 +12,50 @@
                 {
                     "date": 1685820179134,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n export default class RegistionPage extends BasePage {\r\n \r\n     async isRegisterPageDisplayed(){\r\n \r\n-        await page.waitForSelector('salutation')    \r\n+        await page.waitForSelector('#salutation')    \r\n  \r\n     }\r\n \r\n     async openRegisterPage(){\r\n"
+                },
+                {
+                    "date": 1685843096543,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import BasePage from './BasePage'\r\n+const TestDate = require('../Utilities/testData.js')\r\n \r\n export default class RegistionPage extends BasePage {\r\n \r\n     async isRegisterPageDisplayed(){\r\n"
+                },
+                {
+                    "date": 1685843119178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n             text += charset.charAt(Math.floor(Math.random() * charset.length));\r\n           return text;     \r\n          \r\n       });\r\n-        await page.type('#firstName',gandamtext)\r\n+        await page.type('#firstName',TestDate.)\r\n         await page.type('#lastName',gandamtext)\r\n         await page.type('#email',gandamtext+'@'+gandamtext+'.com')\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1685843150780,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n             text += charset.charAt(Math.floor(Math.random() * charset.length));\r\n           return text;     \r\n          \r\n       });\r\n-        await page.type('#firstName',TestDate.)\r\n+        await page.type('#firstName',TestDate.TestDataGenerator.)\r\n         await page.type('#lastName',gandamtext)\r\n         await page.type('#email',gandamtext+'@'+gandamtext+'.com')\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1685843171902,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,17 +17,17 @@\n     async enterNewUserData(){\r\n         await page.select('#salutation','Frau')\r\n        // const gandamtext = await page.evaluate(this.TextGenerator())\r\n        //Text Generator\r\n-       const gandamtext = await page.evaluate(() => {\r\n+    /*   const gandamtext = await page.evaluate(() => {\r\n         var text = \"\";\r\n           var charset = \"abcdefghijklmnopqrstuvwxyz\";\r\n           for (var i = 0; i < 5; i++)\r\n             text += charset.charAt(Math.floor(Math.random() * charset.length));\r\n           return text;     \r\n          \r\n       });\r\n-        await page.type('#firstName',TestDate.TestDataGenerator.)\r\n+        await page.type('#firstName',TestDate.TestDataGenerator.TextGenerator())\r\n         await page.type('#lastName',gandamtext)\r\n         await page.type('#email',gandamtext+'@'+gandamtext+'.com')\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1685843190357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,10 +25,11 @@\n             text += charset.charAt(Math.floor(Math.random() * charset.length));\r\n           return text;     \r\n          \r\n       });\r\n+      */\r\n         await page.type('#firstName',TestDate.TestDataGenerator.TextGenerator())\r\n-        await page.type('#lastName',gandamtext)\r\n+        await page.type('#lastName',TestDate.TestDataGenerator.TextGenerator())\r\n         await page.type('#email',gandamtext+'@'+gandamtext+'.com')\r\n \r\n \r\n     }\r\n"
+                },
+                {
+                    "date": 1685843246947,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,37 @@\n+import BasePage from './BasePage'\r\n+const TestDate = require('../Utilities/testData.js')\r\n+\r\n+export default class RegistionPage extends BasePage {\r\n+\r\n+    async isRegisterPageDisplayed(){\r\n+\r\n+        await page.waitForSelector('#salutation')    \r\n+ \r\n+    }\r\n+\r\n+    async openRegisterPage(){\r\n+\r\n+        await page.click('button#registerAccount')    \r\n+ \r\n+    }\r\n+    async enterNewUserData(){\r\n+        await page.select('#salutation','Frau')\r\n+       // const gandamtext = await page.evaluate(this.TextGenerator())\r\n+       //Text Generator\r\n+    /*   const gandamtext = await page.evaluate(() => {\r\n+        var text = \"\";\r\n+          var charset = \"abcdefghijklmnopqrstuvwxyz\";\r\n+          for (var i = 0; i < 5; i++)\r\n+            text += charset.charAt(Math.floor(Math.random() * charset.length));\r\n+          return text;     \r\n+         \r\n+      });\r\n+      */\r\n+        await page.type('#firstName',TestDate.TestDataGenerator.TextGenerator())\r\n+        await page.type('#lastName',TestDate..TextGenerator())\r\n+        await page.type('#email',gandamtext+'@'+gandamtext+'.com')\r\n+\r\n+\r\n+    }\r\n+\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685843253979,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,49 +26,12 @@\n           return text;     \r\n          \r\n       });\r\n       */\r\n-        await page.type('#firstName',TestDate.TestDataGenerator.TextGenerator())\r\n-        await page.type('#lastName',TestDate..TextGenerator())\r\n+        await page.type('#firstName',TestDate.TextGenerator())\r\n+        await page.type('#lastName',TestDate.TextGenerator())\r\n         await page.type('#email',gandamtext+'@'+gandamtext+'.com')\r\n \r\n \r\n     }\r\n \r\n-}\n-import BasePage from './BasePage'\r\n-const TestDate = require('../Utilities/testData.js')\r\n-\r\n-export default class RegistionPage extends BasePage {\r\n-\r\n-    async isRegisterPageDisplayed(){\r\n-\r\n-        await page.waitForSelector('#salutation')    \r\n- \r\n-    }\r\n-\r\n-    async openRegisterPage(){\r\n-\r\n-        await page.click('button#registerAccount')    \r\n- \r\n-    }\r\n-    async enterNewUserData(){\r\n-        await page.select('#salutation','Frau')\r\n-       // const gandamtext = await page.evaluate(this.TextGenerator())\r\n-       //Text Generator\r\n-    /*   const gandamtext = await page.evaluate(() => {\r\n-        var text = \"\";\r\n-          var charset = \"abcdefghijklmnopqrstuvwxyz\";\r\n-          for (var i = 0; i < 5; i++)\r\n-            text += charset.charAt(Math.floor(Math.random() * charset.length));\r\n-          return text;     \r\n-         \r\n-      });\r\n-      */\r\n-        await page.type('#firstName',TestDate.TestDataGenerator.TextGenerator())\r\n-        await page.type('#lastName',TestDate.TestDataGenerator.TextGenerator())\r\n-        await page.type('#email',gandamtext+'@'+gandamtext+'.com')\r\n-\r\n-\r\n-    }\r\n-\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685843360169,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,13 @@\n       */\r\n         await page.type('#firstName',TestDate.TextGenerator())\r\n         await page.type('#lastName',TestDate.TextGenerator())\r\n         await page.type('#email',gandamtext+'@'+gandamtext+'.com')\r\n+        await page.type('#password',password)\r\n+        await page.type('#password2',password)\r\n+        await page.click(\"div.accountNew__newsletterCheckbox > div > div > span.checkbox__checkbox.checkbox__checkbox--alignTop\") ;\r\n+        await page.click(\"div.accountNew__agbCheckbox > div > div > span.checkbox__checkbox.checkbox__checkbox--alignTop\") ;\r\n+        await page.click(\"#register-submit\") ;\r\n \r\n-\r\n     }\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685843366844,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n       */\r\n         await page.type('#firstName',TestDate.TextGenerator())\r\n         await page.type('#lastName',TestDate.TextGenerator())\r\n         await page.type('#email',gandamtext+'@'+gandamtext+'.com')\r\n-        await page.type('#password',password)\r\n+        await page.type('#password',test)\r\n         await page.type('#password2',password)\r\n         await page.click(\"div.accountNew__newsletterCheckbox > div > div > span.checkbox__checkbox.checkbox__checkbox--alignTop\") ;\r\n         await page.click(\"div.accountNew__agbCheckbox > div > div > span.checkbox__checkbox.checkbox__checkbox--alignTop\") ;\r\n         await page.click(\"#register-submit\") ;\r\n"
+                },
+                {
+                    "date": 1685843372393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n       */\r\n         await page.type('#firstName',TestDate.TextGenerator())\r\n         await page.type('#lastName',TestDate.TextGenerator())\r\n         await page.type('#email',gandamtext+'@'+gandamtext+'.com')\r\n-        await page.type('#password',test)\r\n+        await page.type('#password',TestDate.PasswordGenerator)\r\n         await page.type('#password2',password)\r\n         await page.click(\"div.accountNew__newsletterCheckbox > div > div > span.checkbox__checkbox.checkbox__checkbox--alignTop\") ;\r\n         await page.click(\"div.accountNew__agbCheckbox > div > div > span.checkbox__checkbox.checkbox__checkbox--alignTop\") ;\r\n         await page.click(\"#register-submit\") ;\r\n"
+                },
+                {
+                    "date": 1685843381083,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n         await page.type('#firstName',TestDate.TextGenerator())\r\n         await page.type('#lastName',TestDate.TextGenerator())\r\n         await page.type('#email',gandamtext+'@'+gandamtext+'.com')\r\n         await page.type('#password',TestDate.PasswordGenerator())\r\n-        await page.type('#password2',TestDate.PasswordGenerator)\r\n+        await page.type('#password2',TestDate.PasswordGenerator())\r\n         await page.click(\"div.accountNew__newsletterCheckbox > div > div > span.checkbox__checkbox.checkbox__checkbox--alignTop\") ;\r\n         await page.click(\"div.accountNew__agbCheckbox > div > div > span.checkbox__checkbox.checkbox__checkbox--alignTop\") ;\r\n         await page.click(\"#register-submit\") ;\r\n \r\n"
                 }
             ],
             "date": 1685820080578,

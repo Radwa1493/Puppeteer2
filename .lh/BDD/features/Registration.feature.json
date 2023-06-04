@@ -1,0 +1,70 @@
+{
+    "sourceFile": "BDD/features/Registration.feature",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 13,
+            "patches": [
+                {
+                    "date": 1685843625187,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1685843633377,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n Feature: Login\r\n \r\n     Scenario: User can't login with invalid credincials\r\n-        Given Open Profile Page\r\n+        Given Open Registration Page\r\n         When Enter Invalid credincials\r\n         Then An error displayed \r\n \r\n"
+                },
+                {
+                    "date": 1685843644356,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n Feature: Login\r\n \r\n     Scenario: User can't login with invalid credincials\r\n-        Given Open Registration Page\r\n+        Given Open Profile Page\r\n         When Enter Invalid credincials\r\n         Then An error displayed \r\n \r\n"
+                },
+                {
+                    "date": 1685843657081,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n Feature: Login\r\n \r\n     Scenario: User can't login with invalid credincials\r\n         Given Open Profile Page\r\n-        When Enter Invalid credincials\r\n+        When Open Profile Page\r\n         Then An error displayed \r\n \r\n"
+                },
+                {
+                    "date": 1685843663406,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n Feature: Login\r\n \r\n     Scenario: User can't login with invalid credincials\r\n         Given Open Profile Page\r\n-        When Open Profile Page\r\n+        When Open Registration Page\r\n         Then An error displayed \r\n \r\n"
+                },
+                {
+                    "date": 1685843670547,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,7 @@\n \r\n     Scenario: User can't login with invalid credincials\r\n         Given Open Profile Page\r\n         When Open Registration Page\r\n+        And \r\n         Then An error displayed \r\n \r\n"
+                },
+                {
+                    "date": 1685843681382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,7 +2,7 @@\n \r\n     Scenario: User can't login with invalid credincials\r\n         Given Open Profile Page\r\n         When Open Registration Page\r\n-        And \r\n+        And Fill New user data\r\n         Then An error displayed \r\n \r\n"
+                },
+                {
+                    "date": 1685843699200,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,6 @@\n     Scenario: User can't login with invalid credincials\r\n         Given Open Profile Page\r\n         When Open Registration Page\r\n         And Fill New user data\r\n-        Then An error displayed \r\n+        Then Homepage displayed  \r\n \r\n"
+                },
+                {
+                    "date": 1685843707656,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,6 @@\n         Given Open Profile Page\r\n         When Open Registration Page\r\n         And Fill New user data\r\n         Then Homepage displayed  \r\n+        \r\n \r\n"
+                },
+                {
+                    "date": 1685843718051,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,6 @@\n         Given Open Profile Page\r\n         When Open Registration Page\r\n         And Fill New user data\r\n         Then Homepage displayed  \r\n-        \r\n+        And n\r\n \r\n"
+                },
+                {
+                    "date": 1685843726938,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,6 @@\n         Given Open Profile Page\r\n         When Open Registration Page\r\n         And Fill New user data\r\n         Then Homepage displayed  \r\n-        And n\r\n+        And New user cearted\r\n \r\n"
+                },
+                {
+                    "date": 1685843748675,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n-Feature: Login\r\n+Feature: Registra,on \r\n \r\n     Scenario: User can't login with invalid credincials\r\n         Given Open Profile Page\r\n         When Open Registration Page\r\n         And Fill New user data\r\n         Then Homepage displayed  \r\n-        And New user cearted\r\n+        And New user created\r\n \r\n"
+                },
+                {
+                    "date": 1685843762255,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n-Feature: Registra,on \r\n+Feature: Registraion \r\n \r\n-    Scenario: User can't login with invalid credincials\r\n+    Scenario: User Registra,on \r\n         Given Open Profile Page\r\n         When Open Registration Page\r\n         And Fill New user data\r\n         Then Homepage displayed  \r\n"
+                },
+                {
+                    "date": 1685843767386,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n Feature: Registraion \r\n \r\n-    Scenario: User Registra,on \r\n+    Scenario: user Registraion \r\n         Given Open Profile Page\r\n         When Open Registration Page\r\n         And Fill New user data\r\n         Then Homepage displayed  \r\n"
+                }
+            ],
+            "date": 1685843625187,
+            "name": "Commit-0",
+            "content": "Feature: Login\r\n\r\n    Scenario: User can't login with invalid credincials\r\n        Given Open Profile Page\r\n        When Enter Invalid credincials\r\n        Then An error displayed \r\n\r\n"
+        }
+    ]
+}
