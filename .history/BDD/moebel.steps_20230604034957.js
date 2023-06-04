@@ -1,7 +1,5 @@
 import { defineFeature, loadFeature } from 'jest-cucumber';
 const TestDataGenerator = require('../Utilities/TestDataGenerator.js')
-const TestDate = require('../Utilities/testData.js')
-
 const data = require('../Utilities/data.json');
 
 import HomePage from '../pages/HomePage'
@@ -27,13 +25,14 @@ defineFeature(feature, test => {
     beforeEach(async function() {
 
             jest.setTimeout(1000000); // increase defult timeout from 5000
-            await page.goto(TestDate.Url) // navigate to url 
-
+    
     })
 
     test('User can\'t login with invalid credincials', ({ given }) => {
         given('Open Url', async function ()   {
+            await page.goto(TestDataGenerator.) // navigate to url 
 
+            await homePage.visit()
             await homePage.isHomePageDisplayed()
             
         });

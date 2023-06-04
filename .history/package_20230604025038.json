@@ -6,7 +6,7 @@
   "scripts": {
     "cucumber": "cucumber-js -f json:cucumber_report.json",
     "generate:report": "node repport.js",
-    "test": "jest --forceExit ",
+    "jest": "jest --forceExit ",
     "testnode": "node ./node_modules/mocha/bin/mocha --timeout=30000 ./tests/Login.js",
     "test-snapshots": "jest --config=jest.config.js --detectOpenHandles --forceExit",
     "test-snapshots-update": "jest --config=jest.config.js --updateSnapshot --detectOpenHandles --forceExit"

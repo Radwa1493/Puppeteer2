@@ -1,0 +1,21 @@
+FROM node:14
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm install @babel/core
+RUN npm install @babel/preset-env
+RUN npm install babel-jest
+RUN npm install chai
+RUN npm install chai
+RUN npm install chai
+RUN npm install chai
+RUN npm install chai
+
+
+
+
+COPY . .
+
+CMD ["npm", "test", "--"]

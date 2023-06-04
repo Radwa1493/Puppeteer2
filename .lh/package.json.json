@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 43,
+            "activePatchIndex": 46,
             "patches": [
                 {
                     "date": 1685788447677,
@@ -180,6 +180,18 @@
                 {
                     "date": 1685826010108,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,13 +10,9 @@\n     \"testnode\": \"node ./node_modules/mocha/bin/mocha --timeout=30000 ./tests/Login.js\",\n     \"test-snapshots\": \"jest --config=jest.config.js --detectOpenHandles --forceExit\",\n     \"test-snapshots-update\": \"jest --config=jest.config.js --updateSnapshot --detectOpenHandles --forceExit\"\n   },\n-\"jest\":{\n-  \"collectionCoverage\"\n-}\n \n-  ,\n   \"author\": \"\",\n   \"license\": \"ISC\",\n   \"dependencies\": {\n     \"@babel/core\": \"^7.22.1\",\n"
+                },
+                {
+                    "date": 1685836237061,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,14 +5,13 @@\n   \"main\": \"index.js\",\n   \"scripts\": {\n     \"cucumber\": \"cucumber-js -f json:cucumber_report.json\",\n     \"generate:report\": \"node repport.js\",\n-    \"jest\": \"jest --forceExit \",\n+    \"jest\": \"tjest --forceExi \",\n     \"testnode\": \"node ./node_modules/mocha/bin/mocha --timeout=30000 ./tests/Login.js\",\n     \"test-snapshots\": \"jest --config=jest.config.js --detectOpenHandles --forceExit\",\n     \"test-snapshots-update\": \"jest --config=jest.config.js --updateSnapshot --detectOpenHandles --forceExit\"\n   },\n-\n   \"author\": \"\",\n   \"license\": \"ISC\",\n   \"dependencies\": {\n     \"@babel/core\": \"^7.22.1\",\n@@ -21,12 +20,14 @@\n     \"chai\": \"^4.3.7\",\n     \"cucumber\": \"^6.0.7\",\n     \"cucumber-html-reporter\": \"^7.1.0\",\n     \"jest\": \"^29.5.0\",\n+    \"jest-html-reporter\": \"^3.10.0\",\n     \"jest-puppeteer\": \"^9.0.0\",\n     \"mocha\": \"^10.2.0\",\n     \"puppeteer\": \"^20.5.0\"\n   },\n   \"devDependencies\": {\n+    \"jest-allure\": \"^0.1.3\",\n     \"jest-cucumber\": \"^3.0.1\"\n   }\n }\n"
+                },
+                {
+                    "date": 1685838237962,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   \"main\": \"index.js\",\n   \"scripts\": {\n     \"cucumber\": \"cucumber-js -f json:cucumber_report.json\",\n     \"generate:report\": \"node repport.js\",\n-    \"jest\": \"tjest --forceExi \",\n+    \"test\": \"jest --forceExit \",\n     \"testnode\": \"node ./node_modules/mocha/bin/mocha --timeout=30000 ./tests/Login.js\",\n     \"test-snapshots\": \"jest --config=jest.config.js --detectOpenHandles --forceExit\",\n     \"test-snapshots-update\": \"jest --config=jest.config.js --updateSnapshot --detectOpenHandles --forceExit\"\n   },\n"
+                },
+                {
+                    "date": 1685838848303,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,32 @@\n+{\n+  \"name\": \"puppeteer_p3\",\n+  \"version\": \"1.0.0\",\n+  \"description\": \"\",\n+  \"main\": \"index.js\",\n+  \"scripts\": {\n+    \"cucumber\": \"cucumber-js -f json:cucumber_report.json\",\n+    \"generate:report\": \"node repport.js\",\n+    \"test\": \"jest --forceExit \",\n+    \"testnode\": \"node ./node_modules/mocha/bin/mocha --timeout=30000 ./tests/Login.js\",\n+    \"test-snapshots\": \"jest --config=jest.config.js --detectOpenHandles --forceExit\",\n+    \"test-snapshots-update\": \"jest --config=jest.config.js --updateSnapshot --detectOpenHandles --forceExit\"\n+  },\n+  \"author\": \"\",\n+  \"license\": \"ISC\",\n+  \"dependencies\": {\n+    \"@babel/core\": \"^7.22.1\",\n+    \"@babel/preset-env\": \"^7.22.4\",\n+    \"babel-jest\": \"^29.5.0\",\n+    \"chai\": \"^4.3.7\",\n+    \"cucumber\": \"^6.0.7\",\n+    \"cucumber-html-reporter\": \"^7.1.0\",\n+    \"jest\": \"^29.5.0\",\n+    \"jest-html-reporter\": \"^3.10.0\",\n+    \"jest-puppeteer\": \"^9.0.0\",\n+    \"mocha\": \"^10.2.0\",\n+    \"puppeteer\": \"^20.5.0\"\n+  },\n+  \"devDependencies\": {\n+    \"jest-cucumber\": \"^3.0.1\"\n+  }\n+}\n"
                 }
             ],
             "date": 1685788447677,

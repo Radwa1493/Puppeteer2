@@ -1,0 +1,30 @@
+{
+    "sourceFile": "Utilities/data.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1685839631895,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1685839639082,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n {\r\n     \"users\": [\r\n-      {\r\n-        \"name\": \"Alice\",\r\n+      \r\n+        \r\n         \"email\": \"alice@example.com\"\r\n       },\r\n       {\r\n         \"name\": \"Bob\",\r\n"
+                },
+                {
+                    "date": 1685839646793,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,4 @@\n {\r\n-    \"users\": [\r\n-      \r\n-        \r\n-        \"email\": \"alice@example.com\"\r\n-      },\r\n-      {\r\n-        \"name\": \"Bob\",\r\n-        \"email\": \"bob@example.com\"\r\n-      }\r\n-    ]\r\n+    \"Url\": \"Alice\",\r\n+    \r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685839676632,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n {\r\n-    \"Url\": \"Alice\",\r\n+    \"Url\": \"https://www.moebel-kraft.de/\"\r\n     \r\n   }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1685839631895,
+            "name": "Commit-0",
+            "content": "{\r\n    \"users\": [\r\n      {\r\n        \"name\": \"Alice\",\r\n        \"email\": \"alice@example.com\"\r\n      },\r\n      {\r\n        \"name\": \"Bob\",\r\n        \"email\": \"bob@example.com\"\r\n      }\r\n    ]\r\n  }"
+        }
+    ]
+}

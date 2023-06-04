@@ -1,0 +1,30 @@
+{
+    "sourceFile": "README.md",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1685838622813,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1685838702050,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-Run on Docker\n\\ No newline at end of file\n+Run on Docker\r\n"
+                },
+                {
+                    "date": 1685838756777,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,2 @@\n-Run on Docker\r\n+Run on Docker.............\r\n+Build the Docker image -< >\r\n"
+                },
+                {
+                    "date": 1685838768096,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n Run on Docker.............\r\n-Build the Docker image -< >\r\n+Build the Docker image run on project terminal : docker build -t my-jest-app .\r\n"
+                }
+            ],
+            "date": 1685838622813,
+            "name": "Commit-0",
+            "content": "Run on Docker"
+        }
+    ]
+}

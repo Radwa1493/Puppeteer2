@@ -1,0 +1,1 @@
+export const xUrl ="https://www.moebel-kraft.de/";

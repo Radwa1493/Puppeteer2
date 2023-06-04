@@ -1,0 +1,82 @@
+{
+    "sourceFile": "Dockerfile",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 16,
+            "patches": [
+                {
+                    "date": 1685827440750,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1685827456461,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,5 +5,5 @@\n COPY . .\r\n EXPOSE 3000\r\n RUN chown -R node /usr/src/app\r\n USER node\r\n-CMD npm run test\n\\ No newline at end of file\n+CMD npm run jest\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685837619660,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n-FROM node:16.14.0\r\n-WORKDIR /usr/src/app\r\n+FROM node:14\r\n+\r\n+WORKDIR /app\r\n+\r\n COPY package*.json ./\r\n+\r\n RUN npm install\r\n\\ No newline at end of file\n+\r\n COPY . .\r\n-EXPOSE 3000\r\n-RUN chown -R node /usr/src/app\r\n-USER node\r\n-CMD npm run jest\n+\r\n+CMD [\"npm\", \"test\", \"--\", \"--forceExit\"]\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685838649456,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,5 +7,5 @@\n RUN npm install\r\n \r\n COPY . .\r\n \r\n-CMD [\"npm\", \"test\", \"--\", \"--forceExit\"]\n\\ No newline at end of file\n+CMD [\"npm\", \"test\", \"--\"]\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685838836527,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,10 @@\n \r\n COPY package*.json ./\r\n \r\n RUN npm install\r\n-\r\n+RUN npm install\r\n+RUN npm install\r\n+RUN npm install\r\n COPY . .\r\n \r\n CMD [\"npm\", \"test\", \"--\"]\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685838861830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,11 +3,11 @@\n WORKDIR /app\r\n \r\n COPY package*.json ./\r\n \r\n+RUN npm install @babel/core\r\n RUN npm install\r\n RUN npm install\r\n RUN npm install\r\n-RUN npm install\r\n COPY . .\r\n \r\n CMD [\"npm\", \"test\", \"--\"]\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685838870857,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n \r\n COPY package*.json ./\r\n \r\n RUN npm install @babel/core\r\n+RUN npm install @babel/preset-env\r\n RUN npm install\r\n RUN npm install\r\n-RUN npm install\r\n COPY . .\r\n \r\n CMD [\"npm\", \"test\", \"--\"]\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685838877168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n COPY package*.json ./\r\n \r\n RUN npm install @babel/core\r\n RUN npm install @babel/preset-env\r\n+RUN npm install babel-jest\r\n RUN npm install\r\n-RUN npm install\r\n COPY . .\r\n \r\n CMD [\"npm\", \"test\", \"--\"]\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685838883993,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,8 @@\n \r\n RUN npm install @babel/core\r\n RUN npm install @babel/preset-env\r\n RUN npm install babel-jest\r\n-RUN npm install\r\n+RUN npm install chai\r\n COPY . .\r\n \r\n CMD [\"npm\", \"test\", \"--\"]\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685838891143,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,15 @@\n RUN npm install @babel/core\r\n RUN npm install @babel/preset-env\r\n RUN npm install babel-jest\r\n RUN npm install chai\r\n+RUN npm install chai\r\n+RUN npm install chai\r\n+RUN npm install chai\r\n+RUN npm install chai\r\n+\r\n+\r\n+\r\n+\r\n COPY . .\r\n \r\n CMD [\"npm\", \"test\", \"--\"]\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685838898336,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,12 +7,12 @@\n RUN npm install @babel/core\r\n RUN npm install @babel/preset-env\r\n RUN npm install babel-jest\r\n RUN npm install chai\r\n+RUN npm install cucumber\r\n RUN npm install chai\r\n RUN npm install chai\r\n RUN npm install chai\r\n-RUN npm install chai\r\n \r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1685838905576,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,11 +8,11 @@\n RUN npm install @babel/preset-env\r\n RUN npm install babel-jest\r\n RUN npm install chai\r\n RUN npm install cucumber\r\n+RUN npm install cucumber-html-reporter\r\n RUN npm install chai\r\n RUN npm install chai\r\n-RUN npm install chai\r\n \r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1685838914057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,10 @@\n RUN npm install babel-jest\r\n RUN npm install chai\r\n RUN npm install cucumber\r\n RUN npm install cucumber-html-reporter\r\n+RUN npm install jest\r\n RUN npm install chai\r\n-RUN npm install chai\r\n \r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1685838931918,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n RUN npm install chai\r\n RUN npm install cucumber\r\n RUN npm install cucumber-html-reporter\r\n RUN npm install jest\r\n-RUN npm install chai\r\n+RUN npm install jest-html-reporter\r\n \r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1685838948870,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,11 +11,11 @@\n RUN npm install cucumber\r\n RUN npm install cucumber-html-reporter\r\n RUN npm install jest\r\n RUN npm install jest-html-reporter\r\n+RUN npm jest-puppeteer\r\n+RUN npm install jest-html-reporter\r\n \r\n \r\n-\r\n-\r\n COPY . .\r\n \r\n CMD [\"npm\", \"test\", \"--\"]\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685838959121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n RUN npm install cucumber-html-reporter\r\n RUN npm install jest\r\n RUN npm install jest-html-reporter\r\n RUN npm jest-puppeteer\r\n-RUN npm install jest-html-reporter\r\n+RUN npm mocha\r\n \r\n \r\n COPY . .\r\n \r\n"
+                },
+                {
+                    "date": 1685838975583,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n RUN npm install jest\r\n RUN npm install jest-html-reporter\r\n RUN npm jest-puppeteer\r\n RUN npm mocha\r\n+RUN npm puppeteer\r\n \r\n-\r\n COPY . .\r\n \r\n CMD [\"npm\", \"test\", \"--\"]\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1685827440750,
+            "name": "Commit-0",
+            "content": "FROM node:16.14.0\r\nWORKDIR /usr/src/app\r\nCOPY package*.json ./\r\nRUN npm install\r\nCOPY . .\r\nEXPOSE 3000\r\nRUN chown -R node /usr/src/app\r\nUSER node\r\nCMD npm run test"
+        }
+    ]
+}

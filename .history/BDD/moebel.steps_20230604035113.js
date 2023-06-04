@@ -27,12 +27,12 @@ defineFeature(feature, test => {
     beforeEach(async function() {
 
             jest.setTimeout(1000000); // increase defult timeout from 5000
-            await page.goto(TestDate.Url) // navigate to url 
-
+    
     })
 
     test('User can\'t login with invalid credincials', ({ given }) => {
         given('Open Url', async function ()   {
+            await page.goto(TestDate.Url) // navigate to url 
 
             await homePage.isHomePageDisplayed()
             
